@@ -5,6 +5,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\BroadcastController;
 use App\Http\Controllers\NewResidentController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
-
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 
 Auth::routes();
 
