@@ -43,4 +43,5 @@
         </main>
     </div>
 </body>
+<script src="/broadcast.js"></script>
 </html>
