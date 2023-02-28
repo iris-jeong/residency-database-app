@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    width: 130px;
+    height: 35x;
+    padding-left: 10px;
+}
+
+#mainbar {
+    height: 73px;
+    width: 100%;
+    /* position: fixed; */
+    background-color: #920c0c;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#profilepic {
+    width: 80px;
+    height: 80px;
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 50%;
+    margin-left: 60px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(211, 211, 211, 1);
+}
+
+#content {
+    padding-left: 210px;
+}
+.sidebar header {
+    text-align: center;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    padding-left: 0px;
+    color: black;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.sidebar ul a i {
+    margin-right: 10px;
+}
+
+ul li:hover a {
+    padding-left: 10px;
+    color: #9a0000;
+    box-sizing: border-box;
+    border-left: 5px solid rgba(154, 0, 0, 1);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
