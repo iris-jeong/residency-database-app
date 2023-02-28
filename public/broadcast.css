@@ -1,0 +1,41 @@
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+#message-area{
+    height: 15em;
+}
+
+/* .current a{
+
+} */
+
+.tab-menu{
+    width: 30%;
+    /* background-color: rebeccapurple; */
+    list-style: none;
+    margin: 0;
+}
+
+
+.tab-menu a{
+    text-decoration: none;
+    color: black;
+    /* background-color: red; */
+}
+
+.tab-menu a:hover{
+    color: goldenrod;
+}
+
+hr{
+    margin: 0;
+}
+
+.tabcontent{
+    display: none;
+}
+
+#custom-message{
+    display: block;
+}
