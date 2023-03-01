@@ -132,7 +132,7 @@
                         </div>
         
                         <!-- Subject input -->
-                        <div class="form-floating">
+                        <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingSubject" placeholder="Password">
                             <label for="floatingSubject">Subject: </label>
                         </div>
@@ -143,7 +143,7 @@
                             <label for="floatingFrequency">Frequency: </label>
                         </div> -->
 
-                        <div class="input-group">
+                        <div class="input-group mb-3">
                             <span class="input-group-text">Frequency: </span>
                             <input type="number" min="1" value="1" class="form-control">
                             <span class="input-group-text">times per</span>
@@ -171,7 +171,7 @@
                         </div>
         
                         <!-- Message input (TEXT ONLY) -->
-                        <div class="form-floating">
+                        <div class="form-floating mb-3">
                             <textarea class="form-control" id="message-area" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                             <label for="floatingTextarea">Message</label>
                         </div>
@@ -183,7 +183,7 @@
                         </div>
         
                         <!-- Send options -->
-                        <div class="send-options">
+                        <div class="send-options mb-3">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="send" id="text" checked>
                                 <label class="form-check-label" for="text">
