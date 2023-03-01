@@ -1,0 +1,32 @@
+h1 {
+    color: #9A0000;
+    font-size: 36px;
+}
+
+.col a {
+display: block;
+height: 100%;
+width: 100%;
+color: black;
+margin-top: 5px;
+box-sizing: border-box;
+text-align: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#test-score-report {
+    padding-top: 30px;
+}
+
+#test-score-report p {
+    font-style: bold;
+}
+
+thead {
+    background-color: #9A0000;
+    color: white;
+    border-radius: 50%;
+}
