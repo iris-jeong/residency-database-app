@@ -6,6 +6,7 @@ use App\Http\Controllers\BroadcastController;
 use App\Http\Controllers\NewResidentController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RunReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
+Route::get('/search/report', [RunReportController::class, 'report'])->name('search.report');
+
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
