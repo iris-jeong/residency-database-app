@@ -1,0 +1,92 @@
+body {
+	background-color: #9a0000;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1	{
+	text-align: center;
+	color: darkred;
+	font-family: "Sofia", sans-serif;
+	font-size: 40px;
+}
+
+.container {
+		margin: 0 auto;
+		padding: 30px;		
+		position: relative;
+		width: 1440px;
+		height: 1024px;
+		background: #FFFFFF;
+		text-align: center;
+	}
+
+.logo {
+	width: 10%;
+	height: 10%;
+	padding-left: 30px;
+}
+
+.asterisk {
+		color: red;
+	}
+
+.name {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.birthdate {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.sex {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.contactInfo {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.otherInfo {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.medicalInfo {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.medicalID {
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+.confirmation {
+	display: flex;
+	justify-content: center;
+	column-gap: 300px;
+}
+
+.button1 {
+	color: black;
+	background-color: gray;
+}
+
+.button2 {
+	color: white;
+	background-color: darkred;
+}
