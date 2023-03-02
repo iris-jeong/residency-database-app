@@ -5,7 +5,7 @@
 <div id="content">
         <div class="row col-sm-12" id="basic-info">
             <div class="col-sm-3" id="basic-photo">
-                <img src="profile_pic.png" id="profile-pic" alt="Profile Pic"> 
+                <img src="{{asset('images/profile_pic.png')}}" id="profile-pic" alt="Profile Pic"> 
             </div>
             <div class="col-sm-9" id="basic-text">
                 <div class="row">
