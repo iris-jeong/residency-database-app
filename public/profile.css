@@ -1,9 +1,9 @@
-#content{
+/* #content{
    position: fixed;
    left: 210px;
-   width: 1230px; /* 1230 */
+   width: 1230px;
    height: 100%;
-}
+} */
 
 #basic-info{
    position: relative;
