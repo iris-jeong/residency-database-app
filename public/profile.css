@@ -1,0 +1,31 @@
+#content{
+   position: fixed;
+   left: 210px;
+   width: 1230px; /* 1230 */
+   height: 100%;
+}
+
+#basic-info{
+   position: relative;
+   top: 36px;
+   left: 140px;
+   width: 750px;
+   height: 163.5px;
+   /* background-color: cornflowerblue; */
+}
+
+#profile-pic {
+   padding: 0;
+   width: 100%;
+   height: 100%;
+}
+
+#specialty {
+   background-color: #E4FFD7;
+   color: #1D6000; 
+}
+
+#pgy {
+   color: #72CB00;
+   border: 1px solid #72CB00;
+}

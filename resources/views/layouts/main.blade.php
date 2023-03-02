@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/broadcast.css">
     <link rel="stylesheet" href="/newresident.css">
     <link rel="stylesheet" href="/settings.css">
+    <link rel="stylesheet" href="/profile.css">
 </head>
 <body>
     <div id="mainbar">
