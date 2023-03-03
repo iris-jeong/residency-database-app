@@ -14,10 +14,11 @@ img {
 #mainbar {
     height: 73px;
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
     background-color: #920c0c;
     box-sizing: border-box;
-
+    z-index: 1;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -35,6 +36,7 @@ img {
 .sidebar {
     position: fixed;
     left: 0;
+    top: 73px;
     width: 210px;
     height: 100%;
     background-color: white;
@@ -45,7 +47,10 @@ img {
 
 #content {
     padding-left: 210px;
+    padding-top: 1em;
+    margin-top: 73px;
 }
+
 .sidebar header {
     text-align: center;
 }
