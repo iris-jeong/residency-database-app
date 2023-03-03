@@ -5,9 +5,9 @@
 <h1>Broadcast</h1>
 <div class="broadcast-container">
     <div id="tabs">
-        <ul class="tab-menu d-flex justify-content-between my-3">
-            <li class="current"><a href="#custom-message" class="p-2">Custom Message</a></li>
-            <li><a href="#automated-alerts" class="p-2">Automated Alerts</a></li>
+        <ul class="tab-menu d-flex justify-content-evenly my-3">
+            <li class="current"><a href="#custom-message" title="Custom Message" class="p-2">Custom Message</a></li>
+            <li><a href="#automated-alerts" title="Automated Alerts" class="p-2">Automated Alerts</a></li>
         </ul>
     </div>
     <hr class="my-3">

@@ -12,25 +12,25 @@ main{
 
 .tab-menu{
     width: 32%;
-    /* background-color: rebeccapurple; */
     list-style: none;
     margin: 0;
+    /* background-color: rebeccapurple; */
 }
-
 
 .tab-menu a{
     text-decoration: none;
     color: black;
     text-align: center;
-    /* background-color: red; */
+    margin: 0;
 }
 
 .tab-menu a:hover, .current a{
-    /* color: goldenrod; */
     border-bottom: 5px solid #FEDB56;
     border-radius: 5px 5px 0 0;
-    font-weight: 450;
 }
+
+.current a{font-weight: 500;}
+
 
 hr{
     margin: 0;
