@@ -3,4 +3,5 @@
 
 @section('content')
 <h1>Settings</h1>
+<p> hi world </p>
 @endsection
