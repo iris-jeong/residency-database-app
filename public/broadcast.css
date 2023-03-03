@@ -11,7 +11,7 @@ main{
 } */
 
 .tab-menu{
-    width: 35%;
+    width: 32%;
     /* background-color: rebeccapurple; */
     list-style: none;
     margin: 0;
@@ -21,11 +21,15 @@ main{
 .tab-menu a{
     text-decoration: none;
     color: black;
+    text-align: center;
     /* background-color: red; */
 }
 
-.tab-menu a:hover{
-    color: goldenrod;
+.tab-menu a:hover, .current a{
+    /* color: goldenrod; */
+    border-bottom: 5px solid #FEDB56;
+    border-radius: 5px 5px 0 0;
+    font-weight: 450;
 }
 
 hr{
