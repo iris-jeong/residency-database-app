@@ -138,24 +138,23 @@
                         </div>
 
                         <!-- Frequency input -->
-                        <!-- <div class="form-floating">
-                            <input type="number" class="form-control" id="floatingSubject" placeholder="Password">
-                            <label for="floatingFrequency">Frequency: </label>
-                        </div> -->
-
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3 freq">
                             <span class="input-group-text">Frequency: </span>
-                            <input type="number" min="1" value="1" class="form-control">
-                            <span class="input-group-text">times per</span>
-                            <select class="form-select" id="inputGroupSelect01">
+                            <span class="input-group-text"><div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="autoSwitch">
+                                <label class="form-check-label" for="autoSwitch">Auto</label>
+                            </div></span>
+                            <input type="number" min="1" value="1" class="form-control disable disableNum">
+                            <span class="input-group-text disableLabel">times per</span>
+                            <select class="form-select disable" id="inputGroupSelect01">
                                 <option selected></option>
                                 <option value="1">day</option>
                                 <option value="2">week</option>
                                 <option value="3">month</option>
                                 <option value="4">year</option>
                             </select>
-                            <span class="input-group-text">starting</span>
-                            <select class="form-select" id="inputGroupSelect01">
+                            <span class="input-group-text disableLabel">starting</span>
+                            <select class="form-select disable" id="inputGroupSelect01">
                                 <option selected></option>
                                 <option value="1">6 months before due</option>
                                 <option value="2">5 months before due</option>
