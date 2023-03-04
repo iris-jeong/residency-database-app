@@ -71,7 +71,7 @@
             </div>
             
             <!-- Buttons to cancel or send -->
-            <div id="button-footer">
+            <div class="button-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-outline-danger">Clear</button>
                 <button type="button" class="btn btn-danger">Send</button>
             </div>
@@ -80,13 +80,15 @@
     </div>
 
     <div class="tabcontent" id="automated-alerts">
+        <button type="button" class="btn btn-outline-dark mb-3" id="newAlertBtn" data-bs-toggle="modal" data-bs-target="#newBroadcastModal">Create New Automated Broadcast</button>
+
         <table class="table">
             <thead class="table-dark">
                 <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Frequency</th>
-                <th scope="col"></th> <!-- col for extra options -->
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col"></th> <!-- col for extra options -->
                 </tr>
             </thead>
             <tbody>
@@ -111,7 +113,6 @@
             </tbody>
         </table>
 
-        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newBroadcastModal">Create New Automated Broadcast</button>
     </div>
 
     <!-- Modal -->
@@ -204,7 +205,7 @@
                         </div>
                         
                         <!-- Buttons to cancel or send -->
-                        <div id="button-footer">
+                        <div class="button-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-outline-danger">Clear</button>
                             <button type="button" class="btn btn-danger">Create</button>
                         </div>

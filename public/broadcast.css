@@ -43,3 +43,12 @@ hr{
 #custom-message{
     display: block;
 }
+
+#newAlertBtn{
+    width: 20em;
+}
+
+.button-footer *{
+    /* background-color: rebeccapurple; */
+    width: 10em;
+}
