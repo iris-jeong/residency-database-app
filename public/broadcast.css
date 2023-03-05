@@ -3,6 +3,10 @@ main{
     margin: 0 auto;
 }
 
+.broadcast-container{
+    margin-top: 2em;
+}
+
 .broadcast-container hr{
     width: 91%;
     margin: 0 auto;
@@ -26,13 +30,14 @@ main{
     text-align: center;
     margin: 0;
     padding-bottom: 0.5em;
+    transition: border 0.1s ease-in-out;
 }
 
 
 .tab-menu a:hover, .current a{
     border-bottom: 5px solid #FEDB56;
-    border-radius: 5px 5px 0 0;
 }
+
 
 .current a{font-weight: 500;}
 
@@ -59,6 +64,10 @@ hr{
     margin: 0 auto;
 }
 
+#auto-alerts-table{
+    max-height: 60vh;
+}
+
 #message-area{
     height: 15em;
 }
@@ -67,11 +76,28 @@ hr{
     text-align: right;
 }
 
+#alertbtn-div{
+    width: fit-content;
+    position: absolute;
+    top: 6.2em;
+    right: 7em;
+}
+
 #newAlertBtn{
     width: 20em;
+    background-color: white;
+}
+
+#newAlertBtn:hover{
+    background-color: #9A0000;
 }
 
 .button-footer *{
     /* background-color: rebeccapurple; */
     width: 10em;
+}
+
+#redhead tr{
+    background-color: #9A0000;
+    color: #9A0000;
 }

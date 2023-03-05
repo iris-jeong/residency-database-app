@@ -80,11 +80,9 @@
     </div>
 
     <div class="tabcontent" id="automated-alerts">
-        <button type="button" class="btn btn-outline-dark mb-3" id="newAlertBtn" data-bs-toggle="modal" data-bs-target="#newBroadcastModal">Create New Automated Broadcast</button>
-
-        <table class="table">
-            <thead class="table-dark">
-                <tr>
+        <table class="table" id="auto-alerts-table">
+            <thead >
+                <tr class="table-secondary">
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Frequency</th>
@@ -110,9 +108,87 @@
                     <td>1x / year</td>
                     <td> : </td> <!-- col for extra options -->
                 </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
+                <tr>
+                    <th scope="row">Update Demographics</th>
+                    <td>Reminder to update demographics</td>
+                    <td>1x / year</td>
+                    <td> : </td> <!-- col for extra options -->
+                </tr>
             </tbody>
         </table>
-
+        <div id="alertbtn-div"><button type="button" class="btn btn-outline-dark mb-3" id="newAlertBtn" data-bs-toggle="modal" data-bs-target="#newBroadcastModal">Create New Automated Broadcast</button></div>
     </div>
 
     <!-- Modal -->
