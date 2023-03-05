@@ -204,14 +204,14 @@
         
                         <!-- To input -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingToInput" placeholder="name@usc.edu">
-                            <label for="floatingToInput">To: </label>
+                            <input type="text" class="form-control" id="floatingTitleInput" placeholder="title">
+                            <label for="floatingTitleInput">Title: </label>
                         </div>
         
                         <!-- Subject input -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingSubject" placeholder="Password">
-                            <label for="floatingSubject">Subject: </label>
+                            <input type="text" class="form-control" id="floatingDescription" placeholder="description">
+                            <label for="floatingDescription">Description: </label>
                         </div>
 
                         <!-- Frequency input -->
