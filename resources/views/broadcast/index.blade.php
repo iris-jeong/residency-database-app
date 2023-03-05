@@ -5,7 +5,7 @@
 <h1>Broadcast</h1>
 <div class="broadcast-container">
     <div id="tabs">
-        <ul class="tab-menu d-flex justify-content-evenly my-3">
+        <ul class="tab-menu d-flex justify-content-evenly mt-3">
             <li class="current"><a href="#custom-message" title="Custom Message" class="p-2">Custom Message</a></li>
             <li><a href="#automated-alerts" title="Automated Alerts" class="p-2">Automated Alerts</a></li>
         </ul>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Send options -->
-            <div class="form-group send-options mb-3">
+            <div class="form-group send-options mb-4">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="send" id="text" checked>
                     <label class="form-check-label" for="text">

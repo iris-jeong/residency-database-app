@@ -2,6 +2,8 @@ main{
     width: 90%;
     margin: 0 auto;
 }
+
+
 #message-area{
     height: 15em;
 }
@@ -42,6 +44,15 @@ hr{
 
 #custom-message{
     display: block;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.send-options{
+    text-align: right;
 }
 
 #newAlertBtn{
