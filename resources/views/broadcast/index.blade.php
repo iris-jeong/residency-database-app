@@ -201,8 +201,14 @@
                 </div>
                 <div class="modal-body">
                     <form></form>
-        
+
                         <!-- To input -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingToInput" placeholder="to">
+                            <label for="floatingToInput">To: </label>
+                        </div>
+        
+                        <!-- Title input -->
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingTitleInput" placeholder="title">
                             <label for="floatingTitleInput">Title: </label>
