@@ -3,20 +3,21 @@ main{
     margin: 0 auto;
 }
 
-
-#message-area{
-    height: 15em;
+.broadcast-container hr{
+    width: 91%;
+    margin: 0 auto;
 }
-
-/* .current a{
-
-} */
 
 .tab-menu{
     width: 32%;
     list-style: none;
     margin: 0;
+    margin-bottom: 2.5px;
     /* background-color: rebeccapurple; */
+}
+
+.tab-menu li{
+    padding-bottom: 0.5em;
 }
 
 .tab-menu a{
@@ -24,7 +25,9 @@ main{
     color: black;
     text-align: center;
     margin: 0;
+    padding-bottom: 0.5em;
 }
+
 
 .tab-menu a:hover, .current a{
     border-bottom: 5px solid #FEDB56;
@@ -49,6 +52,15 @@ hr{
     padding: 2em;
     margin: 0 auto;
     width: 90%;
+}
+
+#automated-alerts{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#message-area{
+    height: 15em;
 }
 
 .send-options{

@@ -6,11 +6,11 @@
 <div class="broadcast-container">
     <div id="tabs">
         <ul class="tab-menu d-flex justify-content-evenly mt-3">
-            <li class="current"><a href="#custom-message" title="Custom Message" class="p-2">Custom Message</a></li>
-            <li><a href="#automated-alerts" title="Automated Alerts" class="p-2">Automated Alerts</a></li>
+            <li class="current"><a href="#custom-message" title="Custom Message">Custom Message</a></li>
+            <li><a href="#automated-alerts" title="Automated Alerts">Automated Alerts</a></li>
         </ul>
     </div>
-    <hr class="my-3">
+    <hr class="mb-3">
 
     <div class="tabcontent" id="custom-message">
         <form>

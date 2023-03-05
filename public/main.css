@@ -5,6 +5,11 @@
     text-decoration: none;
 }
 
+h1{
+    color: #9A0000;
+    font-weight: bolder;
+}
+
 img {
     width: 130px;
     height: 35x;
