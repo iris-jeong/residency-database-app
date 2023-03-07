@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Report')
+@section('title', 'Test Scores Report')
 
 @section('content')
 <div id="test-score-header">

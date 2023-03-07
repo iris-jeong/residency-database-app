@@ -21,7 +21,10 @@ use App\Http\Controllers\RunReportController;
 
 Route::get('/', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
-Route::get('/search/report', [RunReportController::class, 'report'])->name('search.report');
+
+Route::get('/search/testreport', [RunReportController::class, 'test'])->name('search.test');
+Route::get('/search/demographicreport', [RunReportController::class, 'demographic'])->name('search.demographic');
+Route::get('/search/licensereport', [RunReportController::class, 'license'])->name('search.license');
 
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
