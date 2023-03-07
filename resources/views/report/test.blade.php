@@ -5,7 +5,7 @@
 <div id="test-score-header">
     <div class="row">
         <div class="col">
-            <a href="#"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
+            <a href="/search"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
         </div>
         <div class="col-4">
             <h1>Test Scores report</h1>
@@ -17,7 +17,16 @@
 </div>
 
 <div id="test-score-report">
-            <p>Test Score Report</p>
+          <div class="row">
+             <div class="col-2">
+                <p>Test Score Report</p>
+             </div>
+             <div class="col-sm">
+                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                <span>(0 Selected)</span>
+             </div>
+          </div>
+
             <table class="table">
                 <thead>
                   <tr>
@@ -332,3 +341,7 @@
               </table>
         </div>
 @endsection
+
+@push('stylesheets')
+  <link rel="stylesheet" href="{{asset('runreports.css')}}">
+@endpush

@@ -21,8 +21,13 @@ button {
     padding-top: 30px;
 }
 
-#test-score-report p {
-    font-style: bold;
+#test-score-report .row .col-2 p {
+    font-weight: bold;
+}
+
+span {
+    color: gray;
+    font-size: 13px;
 }
 
 thead {
