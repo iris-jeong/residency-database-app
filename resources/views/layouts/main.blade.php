@@ -26,16 +26,16 @@
         <hr>
         <ul>
             <li id="resident-search" class="nav-item">
-                <a href="{{route('search.index')}}" class="nav-link">Search</a>
+                <a href="{{route('search.index')}}" class="nav-link"><i class="fa-regular fa-magnifying-glass"></i> Search</a>
             </li>
             <li id="broadcast" class="nav-item">
-                <a href="{{route('broadcast.index')}}" class="nav-link">Broadcast</a>
+                <a href="{{route('broadcast.index')}}" class="nav-link"><i class="fa-regular fa-envelope"></i> Broadcast</a>
             </li>
             <li id="add-resident" class="nav-item">
-                <a href="{{route('new.index')}}" class="nav-link">Add New Resident</a>
+                <a href="{{route('new.index')}}" class="nav-link"><i class="fa-regular fa-circle-plus"></i> Add New Resident</a>
             </li>
             <li id="settings" class="nav-item">
-                <a href="{{route('settings.index')}}" class="nav-link">Settings</a>
+                <a href="{{route('settings.index')}}" class="nav-link"><i class="fa-regular fa-gear"></i> Settings</a>
             </li>
         </ul>
     </div>
