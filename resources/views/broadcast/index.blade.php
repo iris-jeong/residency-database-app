@@ -80,7 +80,9 @@
     </div>
 
     <div class="tabcontent" id="automated-alerts">
-        <table class="table" id="auto-alerts-table">
+        
+    <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>     -->
+    <table class="table" id="auto-alerts-table">
             <thead >
                 <tr class="table-secondary">
                     <th scope="col">Title</th>
@@ -91,100 +93,69 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">License Renewal</th>
+                    <th scope="row" >License Renewal</th>
                     <td>Notification about license renewal</td>
                     <td>Auto</td>
-                    <td> : </td> <!-- col for extra options -->
+                    <td class="kebab">:</td>
+					<td class="kebab-menu hidden">
+						<div class="kebab-div">
+							<div>Edit</div>
+							<hr />
+							<div>Delete</div>
+						</div>
+					</td>
                 </tr>
                 <tr>
                     <th scope="row">Missing Document</th>
                     <td>Requesting a required document from resident</td>
                     <td>1x / month</td>
-                    <td> : </td> <!-- col for extra options -->
+                    <td class="kebab">:</td>
+					<td class="kebab-menu hidden">
+						<div class="kebab-div">
+							<div>Edit</div>
+							<hr />
+							<div>Delete</div>
+						</div>
+					</td>
                 </tr>
                 <tr>
                     <th scope="row">Update Demographics</th>
                     <td>Reminder to update demographics</td>
                     <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
+                    <td class="kebab">:</td>
+					<td class="kebab-menu hidden">
+						<div class="kebab-div">
+							<div>Edit</div>
+							<hr />
+							<div>Delete</div>
+						</div>
+					</td>               
                 </tr>
                 <tr>
                     <th scope="row">Update Demographics</th>
                     <td>Reminder to update demographics</td>
                     <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
+                    <td class="kebab">:</td>
+					<td class="kebab-menu hidden">
+						<div class="kebab-div">
+							<div>Edit</div>
+							<hr />
+							<div>Delete</div>
+						</div>
+					</td>               
                 </tr>
                 <tr>
                     <th scope="row">Update Demographics</th>
                     <td>Reminder to update demographics</td>
                     <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
-                </tr>
-                <tr>
-                    <th scope="row">Update Demographics</th>
-                    <td>Reminder to update demographics</td>
-                    <td>1x / year</td>
-                    <td> : </td> <!-- col for extra options -->
+                    <td class="kebab">:</td>
+					<td class="kebab-menu hidden">
+						<div class="kebab-div">
+							<div>Edit</div>
+							<hr />
+							<div>Delete</div>
+						</div>
+					</td>              
                 </tr>
             </tbody>
         </table>

@@ -1,16 +1,16 @@
 $(document).ready(function(){
 
     $('.tab-menu a').click(function(event) {
-    event.preventDefault();
-    
-    // Toggle active class on tab buttons
-    $(this).parent().addClass("current");
-    $(this).parent().siblings().removeClass("current");
-    
-    // display only active tab content
-    var activeTab = $(this).attr("href");
-    $('.tabcontent').not(activeTab).css("display","none");
-    $(activeTab).fadeIn();
+        event.preventDefault();
+        
+        // Toggle active class on tab buttons
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        
+        // display only active tab content
+        var activeTab = $(this).attr("href");
+        $('.tabcontent').not(activeTab).css("display","none");
+        $(activeTab).fadeIn();
     
     });
 
@@ -28,5 +28,23 @@ $(document).ready(function(){
             $('.disableNum').prop("value", "1");
         }
     })
+
+    			//Retrieve all the kebab ':' buttons
+    // var kebabs = document.querySelectorAll(".kebab");
+
+    //Retrieve all the corresponding kebab menus "edit / delete"
+    let kebabMenus = document.querySelectorAll(".kebab-menu");
+
+    $('.kebab').each(function(i){
+        $(this).click(function(){
+            if (kebabMenus[i].classList.contains("hidden")) {                        
+                kebabMenus[i].classList.remove("hidden");
+            } else {
+                kebabMenus[i].classList.add("hidden");
+            }
+        })
+    })
+
+    $('[data-toggle="popover"]').popover({html:true, container: 'body'});  
 
 });
