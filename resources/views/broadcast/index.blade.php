@@ -125,7 +125,7 @@
                     <td class="kebab">:</td>
 					<td class="kebab-menu hidden">
 						<div class="kebab-div">
-                        <div><i class="fa-regular fa-pen-line"></i> Edit</div>
+                            <div><i class="fa-regular fa-pen-line"></i> Edit</div>
 							<hr />
 							<div><i class="fa-regular fa-trash-can"></i> Delete</div>
 						</div>
@@ -138,7 +138,7 @@
                     <td class="kebab">:</td>
 					<td class="kebab-menu hidden">
 						<div class="kebab-div">
-                        <div><i class="fa-regular fa-pen-line"></i> Edit</div>
+                            <div><i class="fa-regular fa-pen-line"></i> Edit</div>
 							<hr />
 							<div><i class="fa-regular fa-trash-can"></i> Delete</div>
 						</div>
@@ -151,7 +151,7 @@
                     <td class="kebab">:</td>
 					<td class="kebab-menu hidden">
 						<div class="kebab-div">
-                        <div><i class="fa-regular fa-pen-line"></i> Edit</div>
+                            <div><i class="fa-regular fa-pen-line"></i> Edit</div>
 							<hr />
 							<div><i class="fa-regular fa-trash-can"></i> Delete</div>
 						</div>
