@@ -67,12 +67,13 @@ hr{
 }
 
 .hidden {
-    visibility: hidden;
+    /* visibility:hidden; */
+    display: none;
 }
 
 .kebab-menu{
     /* display: none; */
-    
+    /* display: block; */
     /* text-align: center;
     margin: 0; */
     position: absolute;

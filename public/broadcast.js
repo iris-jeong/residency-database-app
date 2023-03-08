@@ -39,12 +39,18 @@ $(document).ready(function(){
         $(this).click(function(){
             if (kebabMenus[i].classList.contains("hidden")) {                        
                 kebabMenus[i].classList.remove("hidden");
+                $('.kebab-menu').not(kebabMenus[i]).addClass("hidden");
             } else {
                 kebabMenus[i].classList.add("hidden");
             }
         })
     })
 
-    $('[data-toggle="popover"]').popover({html:true, container: 'body'});  
-
+    // window.addEventListener('click', function(e){   
+    //     if (document.getElementById('clickbox').contains(e.target)){
+    //       // Clicked in box
+    //     } else{
+    //       // Clicked outside the box
+    //     }
+    //   });
 });
