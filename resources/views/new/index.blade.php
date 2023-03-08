@@ -6,7 +6,7 @@
 		<h1>Create Resident Profile</h1>
 
 		<br>
-		<div class= "name">
+		<div class="name">
 			<label for="firstname">First Name: <span class="asterisk">*</span> </label>
 			<input type="text" name="firstname" placeholder="Tommy" id="firstname">
 
