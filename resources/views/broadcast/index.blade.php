@@ -72,7 +72,7 @@
             
             <!-- Buttons to cancel or send -->
             <div class="button-footer d-flex justify-content-between">
-                <button type="button" class="btn btn-outline-danger">Clear</button>
+                <button type="button" class="btn btn-outline-secondary">Clear</button>
                 <button type="button" class="btn btn-danger">Send</button>
             </div>
 
