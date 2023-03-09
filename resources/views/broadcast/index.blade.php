@@ -73,7 +73,7 @@
             <!-- Buttons to cancel or send -->
             <div class="button-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-outline-secondary">Clear</button>
-                <button type="button" class="btn btn-danger">Send</button>
+                <button type="button" class="btn btn-usc">Send</button>
             </div>
 
         </form>
@@ -166,7 +166,7 @@
     <x-broadcast-modal type="New" id="newBroadcastModal">
         <x-slot name="submitbtn">Create</x-slot>
         <x-slot name="label">newBroadcastModalLabel</x-slot>
-        <x-slot name="color">danger</x-slot>
+        <x-slot name="color">usc</x-slot>
     </x-broadcast-modal>
 
     <x-broadcast-modal type="Edit" id="editBroadcastModal">

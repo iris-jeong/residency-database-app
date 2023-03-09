@@ -13,7 +13,7 @@ main{
 }
 
 .tab-menu{
-    width: 32%;
+    width: 35%;
     list-style: none;
     margin: 0;
     margin-bottom: 2.5px;
@@ -149,4 +149,9 @@ hr{
 #redhead tr{
     background-color: #9A0000;
     color: #9A0000;
+}
+
+.btn-usc {
+    color: white;
+    background-color: darkred;
 }
