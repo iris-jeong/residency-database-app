@@ -16,6 +16,15 @@ img {
     padding-left: 10px;
 }
 
+.icons{
+    width: 1.2em;
+    height: auto;
+    margin: 0;
+    margin-right: 5px;
+    padding: 0; 
+    padding-bottom: 2.5px;
+}
+
 #mainbar {
     height: 73px;
     width: 100%;
@@ -82,6 +91,11 @@ img {
     box-sizing: border-box;
     border-left: 5px solid rgba(154, 0, 0, 1);
 }
+
+.sidebar ul li:hover img {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(80%) saturate(6036%) hue-rotate(7deg) brightness(98%) contrast(115%);
+}
+/* filter: invert(10%) sepia(78%) saturate(4393%) hue-rotate(359deg) brightness(99%) contrast(119%); */
 
 hr {
     border: 0;
