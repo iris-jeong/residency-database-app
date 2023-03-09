@@ -101,7 +101,7 @@
 						<div class="kebab-div">
 							<div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
 							<hr />
-							<div><button type="button" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+							<div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
 						</div>
 					</td>
                 </tr>
@@ -114,7 +114,7 @@
 						<div class="kebab-div">
                             <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
 							<hr />
-							<div><button type="button" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+							<div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
 						</div>
 					</td>
                 </tr>
@@ -127,7 +127,7 @@
 						<div class="kebab-div">
                             <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
 							<hr />
-							<div><button type="button" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+							<div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
 						</div>
 					</td>               
                 </tr>
@@ -140,7 +140,7 @@
 						<div class="kebab-div">
                             <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
 							<hr />
-							<div><button type="button" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+							<div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
 						</div>
 					</td>               
                 </tr>
@@ -153,7 +153,7 @@
 						<div class="kebab-div">
                             <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
 							<hr />
-							<div><button type="button" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+							<div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
 						</div>
 					</td>              
                 </tr>
@@ -175,7 +175,12 @@
         <x-slot name="color">warning</x-slot>
     </x-broadcast-modal>
 
-    
+    <x-alert-modal type="Delete" id="confirmDeleteModal">
+        <x-slot name="title">Confirm Delete</x-slot>
+        <x-slot name="label">confirmDeleteModalLabel</x-slot>
+        <x-slot name="body">Are you sure you want to delete this automated broadcast?</x-slot>
+        <x-slot name="color">danger</x-slot>
+    </x-alert-modal>
     
 </div>
 @endsection
