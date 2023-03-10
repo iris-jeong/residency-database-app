@@ -166,7 +166,7 @@
     <x-broadcast-modal type="New" id="newBroadcastModal">
         <x-slot name="submitbtn">Create</x-slot>
         <x-slot name="label">newBroadcastModalLabel</x-slot>
-        <x-slot name="color">usc</x-slot>
+        <x-slot name="color">usc btn-light</x-slot>
     </x-broadcast-modal>
 
     <x-broadcast-modal type="Edit" id="editBroadcastModal">

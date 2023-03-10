@@ -18,5 +18,10 @@
 
 .button2 {
     color: white;
-    background-color: darkred;
+    background-color: #9a0000;
+}
+
+.button2:hover {
+    color: white;
+    background-color: #9a0000;
 }

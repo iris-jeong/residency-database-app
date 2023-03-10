@@ -8,11 +8,11 @@
 		<div class="name d-flex mt-4">
 			<div class="me-3">
 				<label for="firstname" class="form-label">First Name: <span class="asterisk">*</span> </label>
-				<input type="text" name="firstname" placeholder="Tommy" id="firstname" class="form-control">
+				<input type="text" name="firstname" placeholder="Tommy" id="firstname" class="form-control" required>
 			</div>
 			<div>
 				<label for="lastname"class="form-label">Last Name: <span class="asterisk">*</span> </label>
-				<input type="text" class="form-control" name="lastname" placeholder="Trojan" id="lastname">
+				<input type="text" class="form-control" name="lastname" placeholder="Trojan" id="lastname" required>
 			</div>
 		</div>
 
@@ -20,7 +20,7 @@
 
 		<div class= "birthdate w-25">
 			<label for="birthday" class="form-label">Birthdate:<span class="asterisk">*</span> </label>
-			<input type="date" class="form-control" name="birthday" id="birthday">
+			<input type="date" class="form-control" name="birthday" id="birthday" required>
 		</div>
 
 		<br>
@@ -30,11 +30,11 @@
 			<p class="mb-2">Sex:<span class="asterisk">*</p>
 			<div class="mt-1">
 				<div class="form-check form-check-inline"> 
-					<input class="form-check-input" id="male" type="radio" name="sex" value ="Male">
+					<input class="form-check-input" id="male" type="radio" name="sex" value ="Male" required>
 					<label class="form-check-label" for="male">Male</label>
 				</div>
 				<div class="form-check form-check-inline"> 
-					<input class="form-check-input" id="female" type="radio" name="sex" value ="Female">
+					<input class="form-check-input" id="female" type="radio" name="sex" value ="Female" required>
 					<label class="form-check-label" for="female">Female</label>
 				</div>
 			</div>
@@ -45,11 +45,11 @@
 		<div class= "contactInfo d-flex">
 			<div class="me-3">
 				<label class="form-label" for="email" >Email: <span class="asterisk">*</span></label>
-				<input class="form-control" type="text" name = "email" placeholder="ttrojan@usc.edu" id="email">
+				<input class="form-control" type="text" name = "email" placeholder="ttrojan@usc.edu" id="email" required>
 			</div>
 			<div>	
 				<label class="form-label" for="phone">Phone:<span class="asterisk">*</span></label>
-				<input class="form-control" type="phone" name = "phone" placeholder="123-123-1234" id="phone">
+				<input class="form-control" type="phone" name = "phone" placeholder="123-123-1234" id="phone" required>
 			</div>
 		</div>
 
@@ -57,7 +57,7 @@
 
 		<div class= "address">
 			<label for="address" class="form-label">Address: <span class="asterisk">*</span></label>
-			<input class="form-control mb-3" type="text" name = "address" placeholder="Street address line 1" id="address">
+			<input class="form-control mb-3" type="text" name = "address" placeholder="Street address line 1" id="address" required>
 
 			<!-- <label for="address" > -->
 			<input class="form-control" type="text" name = "address" placeholder="Street address line 2" id="address">
@@ -68,7 +68,7 @@
 		<div class= "otherInfo d-flex">
 			<div class= "City me-3">
 				<label class="form-label" for="city" >City: <span class="asterisk">*</span></label>
-				<input class="form-control" type="text" name = "City"  id="city">
+				<input class="form-control" type="text" name = "City"  id="city" required>
 			</div>
 
 			<div class="state me-3">	
@@ -131,7 +131,7 @@
 
 			<div class= "zip">
 				<label for="zip" class="form-label" >Zip: <span class="asterisk">*</span></label>
-				<input class="form-control" type="text" name = "zip"  id="zip">
+				<input class="form-control" type="text" name = "zip"  id="zip" required>
 			</div>
 		</div>
 
@@ -140,7 +140,7 @@
 		<div class= "medicalInfo d-flex">
 			<div class="specialty me-3">	
 				<label class="form-label" for="Specialty" >Specialty: <span class="asterisk">*</span></label>
-				<select class="form-select">
+				<select class="form-select" required>
 					<option value="0"></option>
 					<option value="AT">Abdominal Transplant</option>
 					<option value="AG">Advanced GI MIS</option>
@@ -158,7 +158,7 @@
 
 			<div class="level">	
 				<label for="level" class="form-label">PGY Level: <span class="asterisk">*</span></label>
-				<select class="form-select">
+				<select class="form-select" required>
 					<option value="0"></option>
 					<option value="1">PGY 1</option>
 					<option value="2">PGY 2</option>
@@ -176,20 +176,20 @@
 		<div class= "medicalID d-flex">
 			<div class="me-3">
 				<label for="NPI" class="form-label">NPI #: <span class="asterisk">*</span></label>
-				<input class="form-control" type="text" name = "NPI"  id="NPI">
+				<input class="form-control" type="text" name = "NPI"  id="NPI" required>
 			</div>
 			<div>
 				<label class="form-label" for="pager" >Pager #: <span class="asterisk">*</span></label>
-				<input class="form-control" type="text" name = "Pager"  id="Pager">	
+				<input class="form-control" type="text" name = "Pager"  id="Pager" required>	
 			</div>
 		</div>
 
 		<br>
 
 		<div class= "confirmation d-flex justify-content-between">
-			<button class="btn button1">Cancel</button>
+			<button class="btn button1 btn-secondary">Cancel</button>
 
-			<button class="btn button2">Create profile</button>
+			<button class="btn button2 btn-light">Create profile</button>
 
 		</div>
 	</div>

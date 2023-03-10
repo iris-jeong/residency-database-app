@@ -153,5 +153,10 @@ hr{
 
 .btn-usc {
     color: white;
-    background-color: darkred;
+    background-color: #9a0000;
+}
+
+.btn-usc:hover {
+    color: white;
+    background-color: #9a0000;
 }

@@ -69,6 +69,10 @@ img {
     text-align: center;
 }
 
+.sidebar ul{
+    padding: 0;
+}
+
 .sidebar ul a {
     display: block;
     height: 100%;
@@ -76,13 +80,15 @@ img {
     line-height: 45px;
     padding-left: 0px;
     color: black;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     transition: 0.5s;
     text-decoration: none;
 }
 
-.sidebar ul a i {
+.sidebar ul a img {
+    margin-left: 1.2em;
     margin-right: 10px;
+    /* background-color: #333; */
 }
 
 .sidebar ul li:hover a {
