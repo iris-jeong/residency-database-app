@@ -14,6 +14,10 @@ $(document).ready(function(){
     
     });
 
+    $('#create-profile').click(function(event) {
+        // event.preventDefault();
+    });
+
     $('#autoSwitch').click(function() {
         if($(this).is(':checked')){
             $('.disable').prop("disabled", true);
@@ -28,9 +32,6 @@ $(document).ready(function(){
             $('.disableNum').prop("value", "1");
         }
     })
-
-    			//Retrieve all the kebab ':' buttons
-    // var kebabs = document.querySelectorAll(".kebab");
 
     //Retrieve all the corresponding kebab menus "edit / delete"
     let kebabMenus = document.querySelectorAll(".kebab-menu");
