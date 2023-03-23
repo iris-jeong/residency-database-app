@@ -1,1 +1,49 @@
+#search-bar{
+    border: 1px solid #DFE2E6;
+    border-radius: 1.8em;
+    background-color: #F4F4F4;
+}
+
+#search-bar *{
+    border-top: none;
+    border-bottom: none;
+    
+}
+
+#search-bar select, #search-bar input, #search-bar span{
+    background-color: #F4F4F4;
+}
+
+#search-bar-head{
+    border-radius: 1.8em 0 0 1.8em;
+    border-left: none;
+    height: 3em;
+}
+
+#search-bar-icon-head{
+    filter: brightness(0) saturate(100%) invert(76%) sepia(7%) saturate(0%) hue-rotate(192deg) brightness(94%) contrast(96%);
+    margin: 0 0em 0 0.5em;
+}
+
+#search-btn{
+    border-radius: 1.8em;
+    background-color: #9A0000;
+    border: 1px solid #9A0000;
+    color: white;
+    /* font-size: 0.9rem; */
+}
+
+#search-bar-icon {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(5%) hue-rotate(123deg) brightness(102%) contrast(102%);;
+}
+
+#searchinput{
+    border-left: none;
+    padding-left: none;
+    width: 12%;
+}
+
+#license-dropdown{
+    border-right: none;
+}
 
