@@ -11,7 +11,7 @@
     <title>@yield('title') - Residency Database</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/055bf89ae5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     @stack('stylesheets')
 </head>
 <body>
@@ -47,5 +47,5 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="/broadcast.js"></script>
+<script src="{{ asset('js/broadcast.js') }}"></script>
 </html>

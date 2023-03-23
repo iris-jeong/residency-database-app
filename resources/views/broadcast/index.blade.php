@@ -2,7 +2,7 @@
 @section('title', 'Broadcast')
 
 @push('stylesheets')
-<link rel="stylesheet" href="/broadcast.css">
+<link rel="stylesheet" href="{{ asset('css/broadcast.css') }}">
 @endpush
 
 @section('content')

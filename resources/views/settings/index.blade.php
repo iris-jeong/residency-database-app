@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title', 'Settings')
 @push('stylesheets')
-  <link rel="stylesheet" href="/search.css">
+<link rel="stylesheet" href="{{ asset('css/settings.css') }}">
 @endpush
 @section('content')
 <h1>Settings</h1>
