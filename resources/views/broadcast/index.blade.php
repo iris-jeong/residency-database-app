@@ -1,6 +1,10 @@
 @extends('layouts.main')
 @section('title', 'Broadcast')
 
+@push('stylesheets')
+<link rel="stylesheet" href="/broadcast.css">
+@endpush
+
 @section('content')
 <h1>Broadcast</h1>
 <div class="broadcast-container">

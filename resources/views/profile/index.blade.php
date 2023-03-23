@@ -1,5 +1,8 @@
 @extends('layouts.main')
 @section('title', 'Profile')
+@push('stylesheets')
+  <link rel="stylesheet" href="{{asset('profile.css')}}">
+@endpush
 
 @section('content')
 <div id="content">

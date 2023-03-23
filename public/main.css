@@ -5,6 +5,11 @@
     text-decoration: none;
 }
 
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
 h1{
     color: #9A0000;
     font-weight: bolder;

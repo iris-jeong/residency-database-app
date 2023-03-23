@@ -1,6 +1,8 @@
 @extends('layouts.main')
 @section('title', 'Add New Resident')
-
+@push('stylesheets')
+  <link rel="stylesheet" href="{{asset('newresident.css')}}">
+@endpush
 @section('content')
 <div class="new-resident-container mb-5">
 		<h1>Create Resident Profile</h1>

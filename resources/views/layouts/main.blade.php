@@ -11,12 +11,7 @@
     <title>@yield('title') - Residency Database</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/055bf89ae5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/search.css">
-    <link rel="stylesheet" href="/broadcast.css">
-    <link rel="stylesheet" href="/newresident.css">
-    <link rel="stylesheet" href="/settings.css">
-    <link rel="stylesheet" href="/profile.css">
+    <link rel="stylesheet" href="{{asset('main.css')}}">
     @stack('stylesheets')
 </head>
 <body>

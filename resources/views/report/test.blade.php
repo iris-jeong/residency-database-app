@@ -1,6 +1,10 @@
 @extends('layouts.main')
 @section('title', 'Test Scores Report')
 
+@push('stylesheets')
+  <link rel="stylesheet" href="{{asset('runreports.css')}}">
+@endpush
+
 @section('content')
 <div id="test-score-header">
     <div class="row">
@@ -342,6 +346,3 @@
         </div>
 @endsection
 
-@push('stylesheets')
-  <link rel="stylesheet" href="{{asset('runreports.css')}}">
-@endpush
