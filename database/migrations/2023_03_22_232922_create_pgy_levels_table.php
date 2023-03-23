@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-    //1. Create the pgy_levels table.
+    //1. Create 'pgy_levels' table.
     Schema::create('pgy_levels', function (Blueprint $table) {
         $table->id();
         $table->string('level');
-        $table->timestamps();
     });
 
-    //2. Insert levels data into the database as part of the migration.
+    //2. Insert pgy levels data into the table as part of the migration.
     $levels = [
         'PGY 1',
         'PGY 2',
