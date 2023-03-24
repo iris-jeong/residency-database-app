@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
     <title>@yield('title') - Residency Database</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/055bf89ae5.js" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="mainbar">
-        <img src="{{asset('images/keck-logo.png')}}" alt="USC Keck Logo">
+        <a href="{{route('search.index')}}" class="nav-link"><img src="{{asset('images/keck-logo.png')}}" alt="USC Keck Logo"></a>
     </div>
 
     <div class="sidebar">
