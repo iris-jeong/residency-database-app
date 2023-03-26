@@ -12,6 +12,11 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    //A user belongs to a PGY Level.
+    public function pgyLevel() {
+        return $this->belongsTo(PgyLevel::class);
+    }
+    
     /**
      * The attributes that are mass assignable.
      *
