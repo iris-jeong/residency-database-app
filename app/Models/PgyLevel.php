@@ -9,8 +9,13 @@ class PgyLevel extends Model
 {
     use HasFactory;
 
-    //A PGY Level has many users.
+    //A pgy level has many demographics.
+    public function demographics() {
+        return $this->hasMany(Demographic::class);
+    }
+
+    //A pgy level has many users (through the demographics table).
     public function users() {
-        return $this->hasMany(User::class);
+        return $this->hasManyThrough(User::class, Demographic::class);
     }
 }
