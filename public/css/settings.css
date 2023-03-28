@@ -1,0 +1,233 @@
+.tab-menu{
+    width: 35%;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 2.5px;
+    /* background-color: rebeccapurple; */
+}
+
+.tab-menu li{
+    padding-bottom: 0.5em;
+}
+
+.tab-menu a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.5em;
+    transition: border 0.1s ease-in-out;
+}
+
+
+.tab-menu a:hover, .current a{
+    border-bottom: 5px solid #FEDB56;
+}
+
+
+.current a{font-weight: 500;}
+
+.tabcontent{
+    display: none;
+}
+
+#Admin{
+    display: block;
+    /*border: 1px solid #dadada;
+    border-radius: 10px;
+    padding: 2em;*/
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+
+#admin-users{
+	padding: 0;
+}
+
+#admin-users li{
+	border-top: 1px solid #E8E8E8;
+	padding: .2em;
+}
+
+#admin-users li:last-child{
+border-bottom: 1px solid #E8E8E8;
+}
+.admin-pic{
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	background-color: #D9D9D9;
+	margin: 0 1em;
+}
+
+.admin-info p{
+margin: 0px;
+}
+
+.admin-name{
+	font-size: 18px;
+	color: black;
+}
+
+.admin-email{
+	font-size: 12px;
+	color: #898989;
+}
+
+
+#admin-text{
+position: absolute;
+width: 125px;
+height: 24px;
+left: 389px;
+top: 194px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+
+#add{
+width: 135px;
+height: 24px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+
+display: flex;
+align-items: center;
+letter-spacing: 0.38px;
+color: #535353;
+}
+
+#admin-input{
+width: 15em;
+}
+
+#admin-count{
+	font-size: 12px;
+	color: #828282
+}
+
+#box-text{
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px;
+gap: 10px;
+width: 344px;
+height: 38px;
+background: #FFFFFF;
+border: 1px solid #CFCFCF;
+border-radius: 8px;
+}
+
+#button{
+box-sizing: border-box;
+width: 95px;
+height: 38px;
+background: #FFFFFF;
+border: 1px solid #9A0000;
+border-radius: 8px;
+}
+
+#button-text{
+position: relative;
+width: 71px;
+height: 22px;
+left: 764px;
+top: 292px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: 0.38px;
+color: #9A0000;
+}
+
+#user-text{
+position: absolute;
+width: 85px;
+height: 24px;
+left: 396px;
+top: 362px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: 0.38px;
+color: #535353;
+}
+
+#small-text{
+position: absolute;
+width: 51px;
+height: 24px;
+left: 489px;
+top: 362px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: 0.38px;
+color: #828282;
+}
+
+#every{
+	font-size: 16px;
+	font-weight: 600;
+	border-bottom: 1px solid #CFCFCF;
+	margin-bottom: 0px;
+}
+
+#req-doc{
+	font-weight: 600;
+	font-size: 14px;
+	color: #696969;
+	margin-bottom: 5px;
+}
+
+#require-text{
+	font-size: 16px;
+	font-weight: 400;
+	color: #000000;
+	margin-top: 0px;
+}
+.doc-name{
+	font-size: 14px;
+	font-weight: 500;
+	color: black;
+}
+
+.doc-info p{
+margin: 0px;
+}
+
+#new-req{
+	font-size: 14px;
+	color: #2F2F2F;
+	margin-left: .5em
+}
+
+.fa-plus{
+	color: #9A0000;
+}
+
+
