@@ -187,4 +187,7 @@
     </ul>
 </div>
 
+@push('scripts')
+<script src="{{ asset('js/search.js') }}"></script>
+@endpush
 @endsection

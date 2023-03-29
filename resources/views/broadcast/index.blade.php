@@ -185,4 +185,7 @@
         </x-alert-modal>
         
     </div>
+    @push('scripts')
+    <script src="{{ asset('js/broadcast.js') }}"></script>
+    @endpush
 @endsection
