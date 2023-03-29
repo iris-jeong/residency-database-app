@@ -104,6 +104,10 @@
     max-height: 60vh;
 }
 
+#auto-alerts-table tr {
+    position: relative;
+}
+
 #automated-alerts-header{
     background-color: #9A0000;
 }
