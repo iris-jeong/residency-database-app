@@ -22,11 +22,14 @@
 }
 
 /* Level Badges */
+/* This is the base css badge to indicate the badge is a level */
 .level{
     background-color: white;
     color: #3F4046;
     border: 1.5px solid;
 }
+
+/* Sets the level badge border color for PGY/Research levels */
 .pgy-1{
     border-color: #BF1818;
 }
@@ -53,6 +56,7 @@
 }
 
 /* Status column css */
+/* This is the base css badge to indicate the status */
 .status{
     width: 13px;
     height: 13px;
@@ -62,6 +66,7 @@
     /* margin: 0; */
 }
 
+/* Sets the color of the status */
 .status-good{
     background-color: #10b710;
 }
