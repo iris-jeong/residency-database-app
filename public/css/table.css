@@ -16,13 +16,9 @@
     border-radius: 0 8px 8px 0;
 }
 
+/* Table sort arrow at header */
 .table-arrow{
-    filter: brightness(0) saturate(100%) invert(86%) sepia(100%) saturate(0%) hue-rotate(109deg) brightness(105%) contrast(102%);
-}
-
-/* sort arrow */
-.sort{
-    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(7477%) hue-rotate(339deg) brightness(70%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(0%) hue-rotate(316deg) brightness(115%) contrast(101%);
 }
 
 /* Level Badges */

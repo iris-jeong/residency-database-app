@@ -80,7 +80,7 @@
             </div>
         </div>
         <div id="run-reports" class="d-flex align-items-center">
-            <p>Run Report</p> <img src="{{asset('icons/right-arrow.svg')}}" alt="run report arrow" class="sort arrow icons mx-3"/>
+            <p>Run Report</p> <img src="{{asset('icons/right-arrow.svg')}}" alt="run report arrow" class="report-arrow arrow icons mx-3"/>
         </div>
     </div>
 
@@ -88,8 +88,8 @@
         <thead>
             <tr id="search-table-header" class="table-header">
                 <th scope="col"></th>
-                <th scope="col">Name <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow sort icons table-arrow ms-2"/></th>
-                <th scope="col">Level <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow sort icons table-arrow ms-2"/></th>
+                <th scope="col">Name <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
+                <th scope="col">Level <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
                 <th scope="col">Specialty</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>

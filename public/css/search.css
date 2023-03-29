@@ -94,7 +94,10 @@
     color: #B20435;
 }
 
-
+/* report arrow */
+.report-arrow{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(7477%) hue-rotate(339deg) brightness(70%) contrast(98%);
+}
 
 #search-table tr td:nth-child(4), #search-table tr th:nth-child(4){
     padding-right: 0;
