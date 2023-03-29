@@ -2,6 +2,7 @@
 @section('title', 'Search')
 @push('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+<link rel="stylesheet" href="{{ asset('css/table.css') }}">
 @endpush
 @section('content')
 <header id="search-header" class="d-flex justify-content-between align-items-center">
@@ -85,7 +86,7 @@
 
     <table class="table table-hover mt-2" id="search-table">
         <thead>
-            <tr id="search-table-header">
+            <tr id="search-table-header" class="table-header">
                 <th scope="col"></th>
                 <th scope="col">Name <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow sort icons table-arrow ms-2"/></th>
                 <th scope="col">Level <img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow sort icons table-arrow ms-2"/></th>

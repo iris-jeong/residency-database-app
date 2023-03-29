@@ -1,0 +1,75 @@
+.table-header{
+    background-color: #9A0000;
+}
+
+.table-header th{
+    color: white;
+}
+
+/* Rounded corners at first col */
+.table-header th:first-child{
+    border-radius: 8px 0 0 8px;
+}
+
+/* Rounded corners at last col */
+.table-header th:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+.table-arrow{
+    filter: brightness(0) saturate(100%) invert(86%) sepia(100%) saturate(0%) hue-rotate(109deg) brightness(105%) contrast(102%);
+}
+
+/* sort arrow */
+.sort{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(7477%) hue-rotate(339deg) brightness(70%) contrast(98%);
+}
+
+/* Level Badges */
+.level{
+    background-color: white;
+    color: #3F4046;
+    border: 1.5px solid;
+}
+.pgy-1{
+    border-color: #BF1818;
+}
+.pgy-2{
+    border-color: #FEB03B;
+}
+.pgy-3{
+    border-color: #F9D100;
+}
+.pgy-4{
+    border-color: #1493CA;
+}
+.pgy-5{
+    border-color: #1493CA;
+}
+.pgy-6{
+    border-color: #8800F3;
+}
+.pgy-7{
+    border-color: #E800B5;
+}
+.research{
+    border-color: #01AE5B;
+}
+
+/* Status column css */
+.status{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: 20%;
+    /* margin: 0; */
+}
+
+.status-good{
+    background-color: #10b710;
+}
+
+.status-bad{
+    background-color: #d20909;
+}
