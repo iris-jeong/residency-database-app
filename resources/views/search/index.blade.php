@@ -18,7 +18,7 @@
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="search" id="archived">
         <label class="form-check-label" for="archived">
-            Archived
+            Archive
         </label>
     </div>
 </div>
