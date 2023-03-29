@@ -2,10 +2,16 @@
     text-decoration: underline;
 }
 
+#current:checked, #archived:checked {
+    background-color: #9A0000;
+    border-color: #9A0000;
+}
+
 #search-bar{
     border: 1px solid #DFE2E6;
     border-radius: 1.8em;
     background-color: #F4F4F4;
+    margin-bottom: 2.5em;
 }
 
 #search-bar *{
@@ -51,3 +57,122 @@
     border-right: none;
 }
 
+#search-table-details p, #run-reports p{
+    padding: 0;
+    margin: 0;
+}
+
+#run-reports p{
+    font-weight: 500;
+}
+
+#search-pagination i{
+    font-weight: 400;
+    color: #474747;
+}
+
+#search-pagination p{
+    color: #888888;
+    font-size: 0.8em;
+}
+
+.arrow{
+    height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.end-page{
+    filter: brightness(0) saturate(100%) invert(98%) sepia(65%) saturate(6736%) hue-rotate(183deg) brightness(125%) contrast(74%);
+}
+
+.not-end-page{
+    filter: brightness(0) saturate(100%) invert(66%) sepia(77%) saturate(1300%) hue-rotate(360deg) brightness(104%) contrast(105%);
+}
+
+#run-reports{
+    color: #B20435;
+}
+
+.sort{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(7477%) hue-rotate(339deg) brightness(70%) contrast(98%);
+}
+
+#search-table-header{
+    background-color: #9A0000;
+}
+
+#search-table-header th{
+    color: white;
+}
+
+#search-table-header th:first-child{
+    border-radius: 8px 0 0 8px;
+}
+
+#search-table-header th:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+.table-arrow{
+    filter: brightness(0) saturate(100%) invert(86%) sepia(100%) saturate(0%) hue-rotate(109deg) brightness(105%) contrast(102%);
+}
+
+#search-table tr td:nth-child(4), #search-table tr th:nth-child(4){
+    padding-right: 0;
+}
+
+#search-table tr td:nth-child(5), #search-table tr th:nth-child(5){
+    padding-left: 0;
+}
+
+.level{
+    background-color: white;
+    color: #3F4046;
+    border: 1.5px solid;
+}
+.pgy-1{
+    border-color: #BF1818;
+}
+.pgy-2{
+    border-color: #FEB03B;
+}
+.pgy-3{
+    border-color: #F9D100;
+}
+.pgy-4{
+    border-color: #1493CA;
+}
+.pgy-5{
+    border-color: #1493CA;
+}
+.pgy-6{
+    border-color: #8800F3;
+}
+.pgy-7{
+    border-color: #E800B5;
+}
+.research{
+    border-color: #01AE5B;
+}
+
+.status-col{
+    background-color: rebeccapurple;
+}
+
+.status{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: 20%;
+    /* margin: 0; */
+}
+
+.status-good{
+    background-color: #10b710;
+}
+
+.status-bad{
+    background-color: #d20909;
+}
