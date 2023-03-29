@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('test_id');
             $table->integer('file_id');
-            $table->integer('pgy_level_id');
+            $table->foreignId('pgy_level_id');
             $table->timestamps();
         });
     }

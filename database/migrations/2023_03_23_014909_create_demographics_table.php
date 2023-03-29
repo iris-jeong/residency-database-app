@@ -23,9 +23,9 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->integer('npi_number')->nullable();
             $table->string('pager_number')->nullable();
-            $table->integer('pgy_level_id');
-            $table->integer('specialty_id');
-            $table->integer('user_id');
+            $table->foreignId('pgy_level_id');
+            $table->foreignId('specialty_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
