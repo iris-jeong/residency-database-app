@@ -32,6 +32,14 @@ class User extends Authenticatable
         return $this->hasOneThrough(PgyLevel::class, Demographic::class);
     }
 
+    public function requirements() {
+        return $this->belongsToMany(Requirement::class);
+    }
+
+    public function tests() {
+        return $this->belongsToMany(Test::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

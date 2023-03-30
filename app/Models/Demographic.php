@@ -18,4 +18,8 @@ class Demographic extends Model
     public function specialty() {
         return $this->belongsTo(Specialty::class);
     }
+
+    public function pgyLevel() {
+        return $this->belongsTo(PgyLevel::class);
+    }
 }
