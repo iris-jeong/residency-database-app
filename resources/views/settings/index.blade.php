@@ -26,12 +26,14 @@
 			<button  class="ms-3" id="button"type="button"> Add Admin</button>
 		</div>
 		<hr>
-
-	<p> Admin Users <span id="admin-count">({{$numAdmins}} users)</span></p>
+	<!-- Laravel -->
+	<!-- <p> Admin Users <span id="admin-count">({{$numAdmins}} users)</span></p> -->
+	<p> Admin Users <span id="admin-count">(7 users)</span></p>
 
 	<ul id="admin-users">
 
-		@foreach( $admins as $admin ) 
+		<!-- Laravel -->
+		<!-- @foreach( $admins as $admin ) 
 			<li class="d-flex justify-content-between align-items-center">
 				<div id="admin-wh" class="d-flex align-items-center">
 					<div class="admin-pic"></div>
@@ -45,10 +47,10 @@
 					<button class="btn  btn-outline-danger" type="button">Remove</button>
 				</div>
 			</li>		
-		@endforeach
+		@endforeach -->
 
 
-		{{-- <li class="d-flex justify-content-between align-items-center">
+		<li class="d-flex justify-content-between align-items-center">
 			<div id="admin-wh" class="d-flex align-items-center">
 				<div class="admin-pic"></div>
 				<div class="admin-info">
@@ -130,7 +132,7 @@
 			<div>
 				<button class="btn  btn-outline-danger" type="button">Remove</button>
 			</div>
-		</li> --}}
+		</li>
 	</ul>
 
 
