@@ -26,29 +26,23 @@
 			<button  class="ms-3" id="button"type="button"> Add Admin</button>
 		</div>
 		<hr>
-	<!-- Laravel -->
-	<!-- <p> Admin Users <span id="admin-count">({{$numAdmins}} users)</span></p> -->
+
 	<p> Admin Users <span id="admin-count">(7 users)</span></p>
 
 	<ul id="admin-users">
-
-		<!-- Laravel -->
-		<!-- @foreach( $admins as $admin ) 
-			<li class="d-flex justify-content-between align-items-center">
-				<div id="admin-wh" class="d-flex align-items-center">
-					<div class="admin-pic"></div>
-					<div class="admin-info">
-						<p class="admin-name">{{$admin->first_name}} {{$admin->last_name}}</p>
-						<p class="admin-email">{{$admin->email}}</p>
-					</div>
+		<li class="d-flex justify-content-between align-items-center">
+			<div id="admin-wh" class="d-flex align-items-center">
+				<div class="admin-pic"></div>
+				<div class="admin-info">
+					<p class="admin-name">Hannah Abott</p>
+					<p class="admin-email">habbott@usc.edu</p>
 				</div>
+			</div>
 
-				<div>
-					<button class="btn  btn-outline-danger" type="button">Remove</button>
-				</div>
-			</li>		
-		@endforeach -->
-
+			<div>
+				<button class="btn  btn-outline-danger" type="button">Remove</button>
+			</div>
+		</li>
 
 		<li class="d-flex justify-content-between align-items-center">
 			<div id="admin-wh" class="d-flex align-items-center">
@@ -351,7 +345,5 @@
 
 </div><!--#settings-container-->
 
-@push('scripts')
-<script src="{{ asset('js/settings.js') }}"></script>
-@endpush
+
 @endsection
