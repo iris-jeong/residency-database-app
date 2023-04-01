@@ -173,11 +173,9 @@
     </table>
 </div>
 
-
-
 <div class="mt-5">
-    <a href="{{route('profile.index')}}" style="text-align:center">For testing convenience: Profile Page</a>
-    <!-- <ul id="run-report-routes" class="d-flex flex-row justify-content-evenly">
+    <p style="text-align:center">(WIP, for testing convenience: )</p>
+    <ul id="run-report-routes" class="d-flex flex-row justify-content-evenly">
         <li id="test-report" class="nav-item">
             <a href="{{route('search.test')}}" class="nav-link">Test Report</a>
         </li>
@@ -188,9 +186,9 @@
             <a href="{{route('search.license')}}" class="nav-link">License Report</a>
         </li>
         <li id="profile" class="nav-item">
-        <a href="{{route('profile.index')}}" class="nav-link">Profile Page</a>
+            <a href="{{route('profile.index')}}" class="nav-link">Profile Page</a>
         </li>
-    </ul> -->
+    </ul>
 </div>
 
 <x-alert-modal type="modal-sm" id="runReportModal">
