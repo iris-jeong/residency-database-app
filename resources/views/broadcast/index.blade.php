@@ -177,11 +177,14 @@
             <x-slot name="color">warning</x-slot>
         </x-broadcast-modal>
 
-        <x-alert-modal type="Delete" id="confirmDeleteModal">
+        <x-alert-modal type="" id="confirmDeleteModal">
             <x-slot name="title">Confirm Delete</x-slot>
             <x-slot name="label">confirmDeleteModalLabel</x-slot>
             <x-slot name="body">Are you sure you want to delete this automated broadcast?</x-slot>
-            <x-slot name="color">danger</x-slot>
+            <x-slot name="footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </x-slot>
         </x-alert-modal>
         
     </div>

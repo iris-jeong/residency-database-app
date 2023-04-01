@@ -80,7 +80,7 @@
             </div>
         </div>
         <div id="run-reports" class="d-flex align-items-center">
-            <p>Run Report</p> <img src="{{asset('icons/right-arrow.svg')}}" alt="run report arrow" class="report-arrow arrow icons mx-3"/>
+            <button type="button" class="btn btn-link runReportBtn d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#runReportModal">Run Report</p> <img src="{{asset('icons/right-arrow.svg')}}" alt="run report arrow" class="report-arrow arrow icons mx-3"/></button>
         </div>
     </div>
 
@@ -173,9 +173,11 @@
     </table>
 </div>
 
+
+
 <div class="mt-5">
-    <p style="text-align:center">(WIP, for testing convenience: )</p>
-    <ul id="run-report-routes" class="d-flex flex-row justify-content-evenly">
+    <a href="{{route('profile.index')}}" style="text-align:center">For testing convenience: Profile Page</a>
+    <!-- <ul id="run-report-routes" class="d-flex flex-row justify-content-evenly">
         <li id="test-report" class="nav-item">
             <a href="{{route('search.test')}}" class="nav-link">Test Report</a>
         </li>
@@ -186,10 +188,38 @@
             <a href="{{route('search.license')}}" class="nav-link">License Report</a>
         </li>
         <li id="profile" class="nav-item">
-            <a href="{{route('profile.index')}}" class="nav-link">Profile Page</a>
+        <a href="{{route('profile.index')}}" class="nav-link">Profile Page</a>
         </li>
-    </ul>
+    </ul> -->
 </div>
+
+<x-alert-modal type="modal-sm" id="runReportModal">
+    <x-slot name="title">Select a report to run</x-slot>
+    <x-slot name="label">runReportModalLabel</x-slot>
+    <x-slot name="body">
+        <div class="form-check">
+            <input class="form-check-input" class="runReportsRadios" value="demographics" type="radio" name="runreportsradio" id="demographics-radio">
+            <label class="form-check-label" for="demographics-radio">
+                Demographics
+            </label>
+        </div>
+        <div class="form-check my-3" id="license-div">
+            <input class="form-check-input" class="runReportsRadios" value="license" type="radio" name="runreportsradio" id="licenses-radio">
+            <label class="form-check-label" for="licenses-radio">
+                Licenses
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" class="runReportsRadios" value="test" type="radio" name="runreportsradio" id="test-radio">
+            <label class="form-check-label" for="test-radio">
+                Test Scores
+            </label>
+        </div>
+    </x-slot>
+    <x-slot name="footer">
+        <button type="button" class="btn btn-light" id="runReportModalBtn">Run Report</button>
+    </x-slot>
+</x-alert-modal>
 
 @push('scripts')
 <script src="{{ asset('js/search.js') }}"></script>

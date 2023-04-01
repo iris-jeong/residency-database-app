@@ -17,4 +17,31 @@ $(document).ready(function(){
         $('#mainbar').css("background-color",color);
     });
 
+    $("#runReportModalBtn").click(function() {
+        let reportChecked = $("input[name='runreportsradio']:checked").val();
+        if(reportChecked == "demographics"){
+            location.href= "search/demographicreport";
+        }
+        else if(reportChecked == "license"){
+            location.href= "search/licensereport";
+        }
+        else if(reportChecked == "test"){
+            location.href= "search/testreport";
+        }
+    });
+
 });
+
+// function runReportModalBtn_clicked(){
+//     let reportChecked = $("input[name='runreportsradio']:checked").val();
+//     let url = "{{route('search.demographic')}}";
+//     if(reportChecked == "demographics"){
+//         window.location.href= url;
+//     }
+//     else if(reportChecked == "license"){
+//         window.location.href= "{{route('search.license')}}";
+//     }
+//     else if(reportChecked == "test"){
+//         window.location.href= "{{route('search.test')}}";
+//     }
+// }
