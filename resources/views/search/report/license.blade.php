@@ -3,6 +3,7 @@
 
 @push('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/runreports.css') }}">
+<link rel="stylesheet" href="{{ asset('css/table.css') }}">
 @endpush
 
 @section('content')
@@ -31,9 +32,9 @@
              </div>
           </div>
 
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
-                  <tr id="search-table-header" class="table-header">
+                  <tr class="table-header">
                     <th scope="col"></th>
                     <th scope="col">Name<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
                     <th scope="col">Level<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
@@ -57,7 +58,7 @@
                     <td>2/05/18</td>
                     <td>2/05/18</td>
                     <td>2/05/18</td>
-                    <td><div class="green-dot"></div></td>
+                    <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -69,7 +70,7 @@
                     <td>2/05/18</td>
                     <td>2/05/18</td>
                     <td>2/05/18</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -81,7 +82,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>4/18/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -93,7 +94,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -105,7 +106,7 @@
                     <td>9/3/23</td>
                     <td>7/03/20</td>
                     <td>9/3/23</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -117,7 +118,7 @@
                     <td>1/26/22</td>
                     <td>7/03/20</td>
                     <td>1/3/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -129,7 +130,7 @@
                     <td>1/26/22</td>
                     <td>1/26/22</td>
                     <td>7/03/20</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -141,7 +142,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -153,7 +154,7 @@
                     <td>1/26/22</td>
                     <td>1/26/22</td>
                     <td>7/03/20</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -165,7 +166,7 @@
                     <td>2/05/18</td>
                     <td>2/05/18</td>
                     <td>2/05/18</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -177,7 +178,7 @@
                     <td>2/05/18</td>
                     <td>2/05/18</td>
                     <td>2/05/18</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -189,7 +190,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>4/18/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -201,7 +202,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -213,7 +214,7 @@
                     <td>4/18/22</td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -225,7 +226,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -237,7 +238,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -249,7 +250,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -261,7 +262,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -273,7 +274,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -285,7 +286,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -297,7 +298,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -309,7 +310,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -321,7 +322,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -333,7 +334,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -345,7 +346,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -357,7 +358,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -369,7 +370,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -381,7 +382,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -393,7 +394,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -405,7 +406,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -417,7 +418,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -429,7 +430,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -441,7 +442,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -453,7 +454,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -465,7 +466,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -477,7 +478,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -489,7 +490,7 @@
                     <td></td>
                     <td></td>
                     <td>4/18/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -501,7 +502,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -513,7 +514,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -525,7 +526,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -537,7 +538,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -549,7 +550,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -561,7 +562,7 @@
                     <td>4/18/22</td>
                     <td></td>
                     <td>1/03/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -573,7 +574,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -585,7 +586,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -597,7 +598,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -609,7 +610,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -621,7 +622,7 @@
                     <td></td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -633,7 +634,7 @@
                     <td>4/18/22</td>
                     <td></td>
                     <td></td>
-                    <td><div class="red-dot"></div></td>
+                    <td><div class="status status-bad"></div></td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
@@ -645,7 +646,7 @@
                     <td>4/18/22</td>
                     <td>7/03/22</td>
                     <td>1/03/22</td>
-                    <td><div class="green-dot"></div></td>
+                     <td><div class="status status-good"></div></td>
                   </tr>
                 </tbody>
               </table>

@@ -3,6 +3,7 @@
 
 @push('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/runreports.css') }}">
+<link rel="stylesheet" href="{{ asset('css/table.css') }}">
 @endpush
 
 @section('content')
@@ -33,7 +34,7 @@
 
             <table class="table table-hover">
                 <thead>
-                  <tr id="search-table-header" class="table-header">
+                  <tr class="table-header">
                     <th scope="col"></th>
                     <th scope="col">Name<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
                     <th scope="col">Level<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
