@@ -25,6 +25,10 @@ button {
     font-weight: bold;
 }
 
+u {
+    text-decoration: underline;
+}
+
 span {
     color: gray;
     font-size: 13px;
