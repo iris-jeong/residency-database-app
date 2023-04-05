@@ -31,7 +31,7 @@
              </div>
           </div>
 
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                 <tr id="search-table-header" class="table-header">
                     <th scope="col"></th>
@@ -46,350 +46,350 @@
                     <th scope="row"></th>
                     <td>Hannah Abott</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Ludo Bagman</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Bathilda Bagshot</td>
                     <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Katie Bell</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Cuthbert Binns</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                    <td>P-Site</td>
+                    <td><u>P-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Sirius Black</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Phineas Nigellus Black</td>
                     <td><span class="level pgy-7 badge rounded-pill">PGY 7</span></td>
-                    <td>P-Site</td>
+                    <td><u>P-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Lavender Brown</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Charity Burbage</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Frank Bryce</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Alecto Carrow</td>
                     <td><span class="level pgy-7 badge rounded-pill">PGY 7</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Reginald Cattermole</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Cho Chang</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Vincent Crabbe</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Colin Creevey</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>P-Site</td>
+                    <td><u>P-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Dirk Cresswell</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>John Dawlish</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Fleur Delacour</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Dedalus Diggle</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Amos Diggory</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Elphias Doge</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Antonin Dolohov</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Aberforth Dumbledore</td>
                     <td><span class="level research badge rounded-pill">Research</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Vernon Dursley</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Marietta Edgecombe</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Arabella Figg</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Argus Filch</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Seamus Finnigan</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Nicolas Flamel</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Mundungus Fletcher</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Filius Flitwick</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Cornelius Fudge</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Marvolo Gaunt</td>
                     <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Anthony Goldstein</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Gregory Goyle</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Gregory Goyle</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Astoria Greengrass</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Gellert Grindelwald</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Godric Gryffindor</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Rubeus Hagrid</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Rolanda Hooch</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Mafalda Hopkirk</td>
                     <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Helga Hufflepuff</td>
                     <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Angelina Johnson</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Lee Jordan</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Bertha Jorkins</td>
                     <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Igor Karkaroff</td>
                     <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Viktor Krum</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>T-Site</td>
+                    <td><u>T-Site<u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Silvanus Kettleburn</td>
                     <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                    <td>B-Site</td>
+                    <td><u>B-Site</u></td>
                     <td>310</td>
                   </tr>
                   <tr>
                     <th scope="row"></th>
                     <td>Bellatrix Lestrange</td>
                     <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                    <td>V-Site</td>
+                    <td><u>V-Site</u></td>
                     <td>310</td>
                   </tr>
                 </tbody>
