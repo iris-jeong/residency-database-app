@@ -1,17 +1,7 @@
-/* #content{
-   position: fixed;
-   left: 210px;
-   width: 1230px;
-   height: 100%;
-} */
 
-#basic-info{
-   position: relative;
-   top: 36px;
-   left: 140px;
+#basic-info {
    width: 750px;
    height: 163.5px;
-   /* background-color: cornflowerblue; */
 }
 
 #profile-pic {
@@ -28,4 +18,22 @@
 #pgy {
    color: #72CB00;
    border: 1px solid #72CB00;
+}
+
+#table-area {
+   margin-top: 20px;
+}
+
+.uploaded {
+   color: #00691D;
+   background-color: #DDFFD8;
+   border: 2px solid;
+   border-color: #DDFFD8;
+}
+
+.expired-missing {
+   color: #CD0000;
+   background-color: #FFD8D8;
+   border: 2px solid;
+   border-color: #FFD8D8;
 }

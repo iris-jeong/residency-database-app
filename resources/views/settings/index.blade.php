@@ -363,5 +363,7 @@
 
 </div><!--#settings-container-->
 
-
+@push('scripts')
+<script src="{{ asset('js/settings.js') }}"></script>
+@endpush
 @endsection
