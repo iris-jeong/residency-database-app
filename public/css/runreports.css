@@ -42,9 +42,10 @@ thead {
 
 /* Check box Icon */
 .checkbox{
-    height: 1em;
+    height: 1.2em;
     margin: 0;
     padding-left: 0px;
+    cursor: pointer;
 }
 
 .table-checkbox {
