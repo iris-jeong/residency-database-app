@@ -10,8 +10,6 @@ class SettingsController extends Controller
 {
     public function index() {
         //Retrieve all users that have admin access.
-        // $admins = User::where('access_level_id', $adminId)->get();
-
         $adminUsers = User::whereHas('accessLevel', function ($query) {
             $query->where('access', 'Admin');
         })->get();
