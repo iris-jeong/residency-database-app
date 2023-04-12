@@ -26,7 +26,7 @@
 
 		<div id="box" class= "d-flex">
 			<input id="admin-input" class="form-control" type="text" placeholder="example@usc.edu">
-			<button  class="ms-3" id="button"type="button"> Add Admin</button>
+			<button type="button" class="btn btn-danger" type="button"> Add Admin</button>
 		</div>
 		
 		<hr>
@@ -45,7 +45,7 @@
 					</div>
 
 					<div>
-						<button class="btn  btn-outline-danger" type="button">Remove</button>
+						<button class="btn btn-outline-danger" type="button">Remove</button>
 					</div>
 				</li>		
 			@endforeach
