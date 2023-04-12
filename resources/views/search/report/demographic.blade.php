@@ -36,7 +36,7 @@
             <table class="table table-hover table-sortable">
                 <thead>
                   <tr class="table-header">
-                  <th scope="col"><img src="{{asset('images/check_box_indeterminate.png')}}" alt="check box" class="checbox icons table-checkbox ms-2"/></th>
+                  <th scope="col"><img src="{{asset('images/check_box_indeterminate.png')}}" alt="check box" class="checkbox icons table-checkbox ms-2"/></th>
                     <th scope="col">Name &#11109</th>
                     <th scope="col">Level &#11109</th>
                     <th scope="col">Email</th>

@@ -42,7 +42,7 @@ thead {
 
 /* Check box Icon */
 .checkbox{
-    height: 1em;
+    height: 1.3em;
     margin: 0;
     padding-left: 0px;
 }
@@ -54,6 +54,7 @@ thead {
 .form-check-input {
     margin-left: 10px;
     border-color: #9A0000;
+    cursor: pointer;
 }
 
 .form-check-input:checked {
