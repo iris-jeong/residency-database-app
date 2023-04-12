@@ -40,7 +40,7 @@
                       <th scope="col">Name &#11109</th>
                       <!-- &#9650 -->
                       <th scope="col">Level &#11109</th>
-                      <th scope="col">Test</th>
+                      <th scope="col">Test &#11109</th>
                       <th scope="col">Score</th>
                     </tr>
                 </thead>
