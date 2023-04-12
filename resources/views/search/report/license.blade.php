@@ -33,7 +33,7 @@
              </div>
           </div>
 
-            <table class="table table-hove table-sortable">
+            <table class="table table-hover table-sortable">
                 <thead>
                   <tr class="table-header">
                     <th scope="col"><img src="{{asset('images/check_box_indeterminate.png')}}" alt="check box" class="checkbox icons table-checkbox ms-2"/></th>
