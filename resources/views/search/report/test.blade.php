@@ -4,6 +4,7 @@
 @push('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/runreports.css') }}">
 <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+<link rel="stylesheet" href="{{ asset('css/tablesort.css') }}">
 @endpush
 
 @section('content')
@@ -32,15 +33,16 @@
              </div>
           </div>
 
-            <table class="table table-hover">
+            <table class="table table-hover table-sortable">
                 <thead>
-                <tr class="table-header">
-                    <th scope="col"><img src="{{asset('icons/square-minus.svg')}}" alt="check box" class="checkbox icons table-checkbox ms-2"/></th>
-                    <th scope="col">Name<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
-                    <th scope="col">Level<img src="{{asset('icons/up-arrow.svg')}}" alt="sort arrow" class="arrow icons table-arrow ms-2"/></th>
-                    <th scope="col">Test</th>
-                    <th scope="col">Score</th>
-                  </tr>
+                  <tr class="table-header">
+                      <th scope="col"><img src="{{asset('images/check_box_indeterminate.png')}}" alt="check box" class="checbox icons table-checkbox ms-2"/></th>
+                      <th scope="col">Name &#11109</th>
+                      <!-- &#9650 -->
+                      <th scope="col">Level &#11109</th>
+                      <th scope="col">Test</th>
+                      <th scope="col">Score</th>
+                    </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -230,14 +232,14 @@
                     <td>Argus Filch</td>
                     <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
                     <td><u>T-Site<u></td>
-                    <td>310</td>
+                    <td>308</td>
                   </tr>
                   <tr>
                     <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
                     <td>Seamus Finnigan</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
                     <td><u>T-Site<u></td>
-                    <td>310</td>
+                    <td>309</td>
                   </tr>
                   <tr>
                     <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
@@ -251,7 +253,7 @@
                     <td>Mundungus Fletcher</td>
                     <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
                     <td><u>V-Site</u></td>
-                    <td>310</td>
+                    <td>320</td>
                   </tr>
                   <tr>
                     <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
@@ -396,5 +398,10 @@
                 </tbody>
               </table>
         </div>
+
+@push('scripts')
+<script src="{{ asset('js/tablesort.js') }}"></script>
+@endpush
+
 @endsection
 
