@@ -34,7 +34,7 @@
                 <a href="{{route('new.index')}}" class="nav-link"><img src="{{asset('icons/plus-circle.svg')}}" class="icons"/> Add New Resident</a>
             </li>
             <li id="settings" class="nav-item">
-                <a href="{{route('settings.index')}}" class="nav-link"><img src="{{asset('icons/gear.svg')}}" class="icons"/> Settings</a>
+                <a href="{{route('settings.admins')}}" class="nav-link"><img src="{{asset('icons/gear.svg')}}" class="icons"/> Settings</a>
             </li>
         </ul>
     </div>
