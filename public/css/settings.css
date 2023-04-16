@@ -1,4 +1,4 @@
-.tab-menu{
+.tab-menu {
     width: 35%;
     list-style: none;
     margin: 0;
@@ -6,11 +6,11 @@
     /* background-color: rebeccapurple; */
 }
 
-.tab-menu li{
+.tab-menu li {
     padding-bottom: 0.5em;
 }
 
-.tab-menu a{
+.tab-menu a {
     text-decoration: none;
     color: black;
     text-align: center;
@@ -19,215 +19,206 @@
     transition: border 0.1s ease-in-out;
 }
 
-
-.tab-menu a:hover, .current a{
-    border-bottom: 5px solid #FEDB56;
+.tab-menu a:hover,
+.current a {
+    border-bottom: 5px solid #fedb56;
 }
 
-
-.current a{font-weight: 500;}
-
-.tabcontent{
-    display: none;
+.current a {
+    font-weight: 500;
 }
 
-#Admin{
-    display: block;
-    /*border: 1px solid #dadada;
-    border-radius: 10px;
-    padding: 2em;*/
-    margin: 0 auto;
+.tabcontent {
     width: 80%;
-
+    margin: 0 auto;
+}
+.content {
+    width: 100%;
 }
 
-
-#admin-users{
-	padding: 0;
+#admin-users {
+    padding: 0;
 }
 
-#admin-users li{
-	border-top: 1px solid #E8E8E8;
-	padding: .2em;
+#admin-users li {
+    border-top: 1px solid #e8e8e8;
+    padding: 0.2em;
 }
 
-#admin-users li:last-child{
-border-bottom: 1px solid #E8E8E8;
+#admin-users li:last-child {
+    border-bottom: 1px solid #e8e8e8;
 }
-.admin-pic{
-	width: 37px;
-	height: 37px;
-	border-radius: 50%;
-	background-color: #D9D9D9;
-	margin: 0 1em;
-}
-
-.admin-info p{
-margin: 0px;
+.admin-pic {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: 0 1em;
 }
 
-.admin-name{
-	font-size: 18px;
-	color: black;
+.admin-info p {
+    margin: 0px;
 }
 
-.admin-email{
-	font-size: 12px;
-	color: #898989;
+.admin-name {
+    font-size: 18px;
+    color: black;
 }
 
-
-#admin-text{
-position: absolute;
-width: 125px;
-height: 24px;
-left: 389px;
-top: 194px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
+.admin-email {
+    font-size: 12px;
+    color: #898989;
 }
 
-#add{
-width: 135px;
-height: 24px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 24px;
+#admin-text {
+    position: absolute;
+    width: 125px;
+    height: 24px;
+    left: 389px;
+    top: 194px;
 
-display: flex;
-align-items: center;
-letter-spacing: 0.38px;
-color: #535353;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-#admin-input{
-width: 15em;
+#add {
+    width: 135px;
+    height: 24px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.38px;
+    color: #535353;
 }
 
-#admin-count{
-	font-size: 12px;
-	color: #828282
+#admin-input {
+    width: 15em;
 }
 
-#box-text{
-box-sizing: border-box;
-
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 8px;
-gap: 10px;
-width: 344px;
-height: 38px;
-background: #FFFFFF;
-border: 1px solid #CFCFCF;
-border-radius: 8px;
+#admin-count {
+    font-size: 12px;
+    color: #828282;
 }
 
-#button{
-box-sizing: border-box;
-width: 95px;
-height: 38px;
-background: #FFFFFF;
-border: 1px solid #9A0000;
-border-radius: 8px;
+#box-text {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+    width: 344px;
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
 }
 
-#button-text{
-position: relative;
-width: 71px;
-height: 22px;
-left: 764px;
-top: 292px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 24px;
-display: flex;
-align-items: center;
-letter-spacing: 0.38px;
-color: #9A0000;
+#button {
+    box-sizing: border-box;
+    width: 95px;
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #9a0000;
+    border-radius: 8px;
 }
 
-#user-text{
-position: absolute;
-width: 85px;
-height: 24px;
-left: 396px;
-top: 362px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 24px;
-display: flex;
-align-items: center;
-letter-spacing: 0.38px;
-color: #535353;
+#button-text {
+    position: relative;
+    width: 71px;
+    height: 22px;
+    left: 764px;
+    top: 292px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.38px;
+    color: #9a0000;
 }
 
-#small-text{
-position: absolute;
-width: 51px;
-height: 24px;
-left: 489px;
-top: 362px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 24px;
-display: flex;
-align-items: center;
-letter-spacing: 0.38px;
-color: #828282;
+#user-text {
+    position: absolute;
+    width: 85px;
+    height: 24px;
+    left: 396px;
+    top: 362px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.38px;
+    color: #535353;
 }
 
-#every{
-	font-size: 16px;
-	font-weight: 600;
-	border-bottom: 1px solid #CFCFCF;
-	margin-bottom: 0px;
+#small-text {
+    position: absolute;
+    width: 51px;
+    height: 24px;
+    left: 489px;
+    top: 362px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.38px;
+    color: #828282;
 }
 
-#req-doc{
-	font-weight: 600;
-	font-size: 14px;
-	color: #696969;
-	margin-bottom: 5px;
+#every {
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 0px;
 }
 
-#require-text{
-	font-size: 16px;
-	font-weight: 400;
-	color: #000000;
-	margin-top: 0px;
-}
-.doc-name{
-	font-size: 14px;
-	font-weight: 500;
-	color: black;
+#req-doc {
+    font-weight: 600;
+    font-size: 14px;
+    color: #696969;
+    margin-bottom: 5px;
 }
 
-.doc-info p{
-margin: 0px;
+#require-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 0px;
+}
+.doc-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
 }
 
-#new-req{
-	font-size: 14px;
-	color: #2F2F2F;
-	margin-left: .5em
+.doc-info p {
+    margin: 0px;
 }
 
-.fa-plus{
-	color: #9A0000;
+#new-req {
+    font-size: 14px;
+    color: #2f2f2f;
+    margin-left: 0.5em;
 }
 
-
+.fa-plus {
+    color: #9a0000;
+}
