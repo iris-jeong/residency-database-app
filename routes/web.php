@@ -28,7 +28,11 @@ Route::get('/search/licensereport', [SearchController::class, 'license'])->name(
 
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
-Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+
+Route::get('/settings', [SettingsController::class, 'showAdmins'])->name('settings.admins');
+Route::get('/settings/admins', [SettingsController::class, 'showAdmins'])->name('settings.admins');
+Route::get('/settings/requirements', [SettingsController::class, 'showRequirements'])->name('settings.requirements');
+
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 
 Auth::routes();
