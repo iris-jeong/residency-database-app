@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         Demographic::truncate();
         
         //Create 300 users in the Users table.
-        $users = User::factory(300)->create();
+        $users = User::factory(100)->create();
 
         foreach($users as $user) {
             //Create a demographic record for each user.

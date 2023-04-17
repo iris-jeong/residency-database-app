@@ -11,15 +11,15 @@ class Demographic extends Model
 
     //A demographic belongs to a user.
     public function user() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, "user_id");
     }
 
     //A demographic belongs to a specialty.
     public function specialty() {
-        return $this->belongsTo(Specialty::class);
+        return $this->belongsTo(Specialty::class, "specialty_id");
     }
 
     public function pgyLevel() {
-        return $this->belongsTo(PgyLevel::class);
+        return $this->belongsTo(PgyLevel::class, "pgy_level_id");
     }
 }

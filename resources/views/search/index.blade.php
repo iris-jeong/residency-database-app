@@ -72,8 +72,8 @@
 <div id="search-table-div">
     <div id="search-table-details" class="d-flex align-items-center justify-content-between">
         <div id="search-pagination" class="d-flex align-items-center">
-            <i class="me-5">300 Results</i>
-            <p>1-50 of 300</p>
+            <i class="me-5">{{$numDemographics}} Results</i>
+            <p>1-50 of {{$numDemographics}}</p>
             <div class="d-flex align-items-center">
                 <img src="{{asset('icons/left-arrow.svg')}}" alt="previous" class="arrow end-page icons mx-3"/>
                 <img src="{{asset('icons/right-arrow.svg')}}" alt="next" class="arrow not-end-page icons mx-3"/>
@@ -97,16 +97,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td scope="row"></td>
-                <td>Hannah Abott</td>
-                <td><span class="level pgy-1 badge rounded-pill">PGY 1</span></td>
-                <td>Cardiothoracic</td>
-                <td>habott@usc.edu</td>
-                <td>310-555-1231</td>
-                <td class="status-cell"><div class="status status-good"></div></td>
-            </tr>
-            <tr>
+            @foreach( $demographicUsers as $demo ) 
+                <tr>
+                    <td scope="row"></td>
+                    <td>{{$demo->user->first_name}} {{$demo->user->last_name}}</td>
+                    <td><span class="level pgy-{{$demo->pgyLevel->id}} badge rounded-pill">{{$demo->pgyLevel->level}}</span></td>
+                    <td class="spec-{{$demo->specialty->id}}">{{$demo->specialty->name}}</td>
+                    <td>{{$demo->user->email}}</td>
+                    <td>{{$demo->phone_number}}</td>
+                    <td class="status-cell"><div class="status status-good"></div></td>
+                </tr>
+            @endforeach
+            <!-- <tr>
                 <td></td>
                 <td>Tommmy Trojan</td>
                 <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
@@ -168,7 +170,7 @@
                 <td>kbell@usc.edu</td>
                 <td>310-555-1231</td>
                 <td><div class="status status-good"></div></td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </div>
