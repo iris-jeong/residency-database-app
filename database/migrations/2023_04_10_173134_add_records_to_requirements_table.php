@@ -33,7 +33,7 @@ return new class extends Migration
 
         foreach ($requirements as $requirement) {
             DB::table('requirements')->insert([
-                'required_doc' => $requirement,
+                'name' => $requirement,
             ]);
         }
     }

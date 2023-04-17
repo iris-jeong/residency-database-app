@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('user_requirement', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->integer('required_doc_id');
+            $table->integer('requirement_id');
             $table->integer('file_id');
             $table->timestamps();
         });

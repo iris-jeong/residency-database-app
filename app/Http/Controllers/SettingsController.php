@@ -54,6 +54,22 @@ class SettingsController extends Controller
         //Redirect the user back to the 'Admin Members' tab.
         return redirect()
             ->route('settings.admins')
-            ->with('success', "Successfully added { $request->input('firstName') } as an admin.");
+            ->with('success', "Successfully added {$request->input('firstName')} as an admin.");
+    }
+
+    public function removeAdmin(Request $request) {
+        //Validate that the user exists in the database.
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+        ]);
+
+        //Delete the user
+        $user = User::find($request->input('user_id'));
+        User::find($request->input('user_id'))->delete();
+
+        //Redirect.
+        return redirect()
+            ->route('settings.admins')
+            ->with('success', "Successfully removed {$user->first_name} as an admin.");
     }
 }

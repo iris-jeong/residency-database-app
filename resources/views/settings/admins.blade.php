@@ -49,9 +49,12 @@
 						</div>
 					</div>
 
-					<div>
-						<button class="btn  btn-outline-danger btn-sm" type="button">Remove</button>
-					</div>
+					<form method="POST" action="{{ route('settings.removeAdmin', $admin->id) }}">
+						@csrf
+						@method('DELETE')
+						<input type="hidden" name="user_id" value="{{$admin->id}}">
+						<button class="btn btn-outline-danger btn-sm" type="submit">Remove</button>
+					</form>
 				</li>		
 			@endforeach
 		</ul>

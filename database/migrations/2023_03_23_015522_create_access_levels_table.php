@@ -21,7 +21,7 @@ return new class extends Migration
         $accessLevels = [
             'Superadmin',
             'Admin',
-            'Resident',
+            'User',
         ];
 
         foreach($accessLevels as $accessLevel) {

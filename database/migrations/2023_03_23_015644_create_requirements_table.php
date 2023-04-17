@@ -14,7 +14,7 @@ return new class extends Migration
         //Create 'requirements' table.
         Schema::create('requirements', function (Blueprint $table) {
             $table->id();
-            $table->string('required_doc');
+            $table->string('name');
             $table->timestamps();
         });
     }
