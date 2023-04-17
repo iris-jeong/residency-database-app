@@ -72,4 +72,22 @@ class SettingsController extends Controller
             ->route('settings.admins')
             ->with('success', "Successfully removed {$user->first_name} as an admin.");
     }
+
+    public function createRequirement(Request $request) {
+        //Validate.
+        $request->validate([
+            'requirement' => 'required',
+        ]);
+
+        //Insert into database.
+        $newRequirement = new Requirement([
+            'name' => $request->input('requirement'),
+        ]);
+        $newRequirement->save();
+        
+        //Redirect.
+        return redirect()
+            ->route('settings.requirements')
+            ->with('success', "Successfully added '{$request->input('requirement')}' as a requirement.");
+    }
 }

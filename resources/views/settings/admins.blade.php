@@ -31,7 +31,7 @@
 					<small class="text-danger">{{$message}}</small>
 				@enderror
 			</div>
-			<button type="submit" id="add-btn" class="btn btn-primary h-50 align-self-end"> Add Admin</button>
+			<button type="submit" class="btn add-btn h-50 align-self-end"> Add Admin</button>
 		</form>
 		<br>
 		<hr>
