@@ -32,4 +32,28 @@ class SettingsController extends Controller
             'requiredDocs' => $requiredDocs
         ]);
     }
+
+    public function createAdmin(Request $request) {
+        //Specify the rules to validate user input.
+        $request->validate([
+            'firstName' => 'required|string|max:20',
+            'lastName' => 'required|string|max:20',
+            'email' => 'required|unique:App\Models\User,email',
+        ]);
+
+        //Once validated, insert the data into the database.
+        $newAdmin = new User([
+            'first_name' => $request->input('firstName'),
+            'last_name' => $request->input('lastName'),
+            'email' => $request->input('email'),
+            'password' => bcrypt('password'), //Update UX for this later.
+            'access_level_id' => AccessLevel::where('access', 'Admin')->first()->id,
+        ]);
+        $newAdmin->save();
+
+        //Redirect the user back to the 'Admin Members' tab.
+        return redirect()
+            ->route('settings.admins')
+            ->with('success', "Successfully added { $request->input('firstName') } as an admin.");
+    }
 }

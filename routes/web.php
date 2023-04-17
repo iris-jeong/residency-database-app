@@ -31,6 +31,7 @@ Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 
 Route::get('/settings', [SettingsController::class, 'showAdmins'])->name('settings.admins');
 Route::get('/settings/admins', [SettingsController::class, 'showAdmins'])->name('settings.admins');
+Route::post('/settings/admins', [SettingsController::class, 'createAdmin'])->name('settings.createAdmin');
 Route::get('/settings/requirements', [SettingsController::class, 'showRequirements'])->name('settings.requirements');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');

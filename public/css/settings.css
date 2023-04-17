@@ -85,12 +85,12 @@
 }
 
 #add {
-    width: 135px;
+    /* width: 135px; */
     height: 24px;
-    font-family: "Roboto";
+    /* font-family: "Roboto"; */
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
 
     display: flex;
@@ -99,8 +99,27 @@
     color: #535353;
 }
 
-#admin-input {
-    width: 15em;
+.form-group {
+    position: relative;
+}
+.form-group small {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+input {
+    margin-right: 8px;
+}
+label {
+    font-size: 14px;
+}
+
+.name {
+    width: 13em;
+}
+
+#email {
+    width: 16em;
 }
 
 #admin-count {
@@ -121,6 +140,17 @@
     background: #ffffff;
     border: 1px solid #cfcfcf;
     border-radius: 8px;
+}
+
+#add-btn {
+    background-color: #9a0000;
+    border-color: #9a0000;
+    color: #ffffff;
+}
+#add-btn:hover {
+    background-color: #ffffff;
+    border-color: #9a0000;
+    color: #9a0000;
 }
 
 #button {
