@@ -40,6 +40,7 @@
     background-color: #9A0000;
     border: 1px solid #9A0000;
     color: white;
+    z-index: 0;
     /* font-size: 0.9rem; */
 }
 
