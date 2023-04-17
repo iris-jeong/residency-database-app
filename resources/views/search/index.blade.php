@@ -101,76 +101,13 @@
                 <tr>
                     <td scope="row"></td>
                     <td>{{$demo->user->first_name}} {{$demo->user->last_name}}</td>
-                    <td><span class="level pgy-{{$demo->pgyLevel->id}} badge rounded-pill">{{$demo->pgyLevel->level}}</span></td>
-                    <td class="spec-{{$demo->specialty->id}}">{{$demo->specialty->name}}</td>
+                    <td><span class="level pgy-{{intdiv($demo->pgyLevel->id, 10) + 1}} badge rounded-pill">{{$demo->pgyLevel->level}}</span></td>
+                    <td class="spec-{{intdiv($demo->specialty->id,10)+1}}">{{$demo->specialty->name}}</td>
                     <td>{{$demo->user->email}}</td>
                     <td>{{$demo->phone_number}}</td>
                     <td class="status-cell"><div class="status status-good"></div></td>
                 </tr>
             @endforeach
-            <!-- <tr>
-                <td></td>
-                <td>Tommmy Trojan</td>
-                <td><span class="level pgy-2 badge rounded-pill">PGY 2</span></td>
-                <td>Hepatobillary</td>
-                <td>ttrojan@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-good"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Jenny Kim</td>
-                <td><span class="level pgy-3 badge rounded-pill">PGY 3</span></td>
-                <td>Breast Oncology</td>
-                <td>jkim@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-bad"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Bob Bruin</td>
-                <td><span class="level pgy-4 badge rounded-pill">PGY 4</span></td>
-                <td>Colorectal</td>
-                <td>bbruin@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-bad"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Carol Folt</td>
-                <td><span class="level pgy-5 badge rounded-pill">PGY 5</span></td>
-                <td>General</td>
-                <td>cfolt@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-good"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Lincoln Riley</td>
-                <td><span class="level pgy-6 badge rounded-pill">PGY 6</span></td>
-                <td>Surgical & Critical Care</td>
-                <td>lriley@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-good"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Cho Chang</td>
-                <td><span class="level pgy-7 badge rounded-pill">PGY 7</span></td>
-                <td>Plastics & Reconstructive</td>
-                <td>cchang@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-bad"></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Katie Bell</td>
-                <td><span class="level research badge rounded-pill">Research</span></td>
-                <td>Research</td>
-                <td>kbell@usc.edu</td>
-                <td>310-555-1231</td>
-                <td><div class="status status-good"></div></td>
-            </tr> -->
         </tbody>
     </table>
 </div>

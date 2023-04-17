@@ -13,7 +13,7 @@ return new class extends Migration
     {
         //Create 'specialties' table.
         Schema::create('specialties', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(1);
             $table->string('name');
         });
 

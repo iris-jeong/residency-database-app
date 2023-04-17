@@ -13,7 +13,7 @@ return new class extends Migration
     {
     //Create 'pgy_levels' table.
     Schema::create('pgy_levels', function (Blueprint $table) {
-        $table->id()->from(1);
+        $table->id()->startingValue(1);
         $table->string('level');
     });
 
