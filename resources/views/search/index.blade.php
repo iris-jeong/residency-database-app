@@ -30,23 +30,35 @@
     @csrf
     <div class="input-group mt-4" id="search-bar">
         <span class="input-group-text" id="search-bar-head"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon-head"/></span>
-        <input type="text" id="searchinput" name="searchinput" placeholder="Enter name" class="form-control shadow-none">
+        <input type="text" id="searchinput" name="searchinput" placeholder="Enter name" class="form-control shadow-none" value="{{ old('searchinput') }}">
         <select class="form-select shadow-none" id="specialty-dropdown" name="specialty-dropdown">
             <option value="">Specialty</option>
             @foreach ($specialties as $specialty)
-                <option value="{{$specialty->id}}">{{$specialty->name}}</option>
+                <option value="{{$specialty->id}}"
+                @if ($specialty->id == old('specialty-dropdown'))
+                    selected="selected"
+                @endif
+                >{{$specialty->name}}</option>
             @endforeach
         </select>
         <select class="form-select shadow-none" id="pgy-dropdown" name="pgy-dropdown">
             <option value="">PGY Level</option>
             @foreach ($pgyLevels as $pgyLevel)
-                <option value="{{$pgyLevel->id}}">{{$pgyLevel->level}}</option>
+                <option value="{{$pgyLevel->id}}"
+                @if ($pgyLevel->id == old('pgy-dropdown'))
+                    selected="selected"
+                @endif
+                >{{$pgyLevel->level}}</option>
             @endforeach
         </select>
         <select class="form-select shadow-none" id="license-dropdown" name="license-dropdown">
             <option value="">License</option>
             @foreach ($licenses as $license)
-                <option value="{{$license->id}}">{{$license->name}}</option>
+                <option value="{{$license->id}}"
+                @if ($license->id == old('license-dropdown'))
+                    selected="selected"
+                @endif
+                >{{$license->name}}</option>
             @endforeach
         </select>
         <button class="btn btn-light" id="search-btn" type="submit"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon"/>Search</button>
