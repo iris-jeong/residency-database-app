@@ -25,6 +25,7 @@ Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search/testreport', [SearchController::class, 'test'])->name('search.test');
 Route::get('/search/demographicreport', [SearchController::class, 'demographic'])->name('search.demographic');
 Route::get('/search/licensereport', [SearchController::class, 'license'])->name('search.license');
+Route::get('/search', [SearchController::class, 'filteredSearch'])->name('search.filteredSearch');
 
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');

@@ -26,30 +26,30 @@
 </header>
 
 <!-- Search Bar -->
-<form>
+<form method="GET" action="{{ route('search.filteredSearch') }}">
     @csrf
     <div class="input-group mt-4" id="search-bar">
         <span class="input-group-text" id="search-bar-head"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon-head"/></span>
-        <input type="text" id="searchinput" placeholder="Enter name" class="form-control shadow-none">
-        <select class="form-select shadow-none" id="specialty-dropdown">
-            <option value="0">Specialty</option>
+        <input type="text" id="searchinput" name="searchinput" placeholder="Enter name" class="form-control shadow-none">
+        <select class="form-select shadow-none" id="specialty-dropdown" name="specialty-dropdown">
+            <option value="">Specialty</option>
             @foreach ($specialties as $specialty)
                 <option value="{{$specialty->id}}">{{$specialty->name}}</option>
             @endforeach
         </select>
-        <select class="form-select shadow-none" id="pgy-dropdown">
-            <option value="0">PGY Level</option>
+        <select class="form-select shadow-none" id="pgy-dropdown" name="pgy-dropdown">
+            <option value="">PGY Level</option>
             @foreach ($pgyLevels as $pgyLevel)
                 <option value="{{$pgyLevel->id}}">{{$pgyLevel->level}}</option>
             @endforeach
         </select>
-        <select class="form-select shadow-none" id="license-dropdown">
-            <option value="0">License</option>
+        <select class="form-select shadow-none" id="license-dropdown" name="license-dropdown">
+            <option value="">License</option>
             @foreach ($licenses as $license)
                 <option value="{{$license->id}}">{{$license->name}}</option>
             @endforeach
         </select>
-        <button class="btn btn-light" id="search-btn" type="button"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon"/>Search</button>
+        <button class="btn btn-light" id="search-btn" type="submit"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon"/>Search</button>
     </div>
 </form>
 
