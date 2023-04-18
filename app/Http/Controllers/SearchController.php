@@ -51,6 +51,7 @@ class SearchController extends Controller
         $name = trim($request->input('searchinput'));
         $specialty = $request->input('specialty-dropdown');
         $pgyLevel = $request->input('pgy-dropdown');
+        $request->flash();
         // $license = $request->input('license-dropdown');
 
         // Checks for any filters to use where clause. Otherwise, get all.
