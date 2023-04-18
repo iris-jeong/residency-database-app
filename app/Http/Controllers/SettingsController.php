@@ -28,6 +28,11 @@ class SettingsController extends Controller
         //Retrieve all required documents.
         $requiredDocs = Requirement::all();
 
+        // Add editMode property to each requirement
+         foreach ($requiredDocs as $doc) {
+             $doc->editMode = false;
+         }
+    
         return view('settings.requirements', [
             'requiredDocs' => $requiredDocs
         ]);
@@ -110,4 +115,21 @@ class SettingsController extends Controller
             ->route('settings.requirements')
             ->with('success', "Successfully deleted the '{$requirement->name}' requirement.");
     }
-}
+
+    public function updateRequirement(Request $request, $requirementId) {
+        //Validate.
+        $request->validate([
+            'editedRequirement' => 'required',
+        ]);
+
+        //Update the requirement.
+        $requirement = Requirement::find($requirementId);
+        $requirement->name = $request->input('requirement');
+        $requirement->save();
+
+        //Redirect.
+        return redirect()
+            ->route('settings.requirements')
+            ->with('success', "Successfully updated the requirement to '{$requirement->name}'.");
+    }
+} 

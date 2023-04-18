@@ -16,30 +16,11 @@
             <p id="req-text">All residents and fellows are required to have these documents and licenses.</p>
         </div>
 
-        <p id="req-doc">Document Name</p>
+        <p id="req-doc">Requirement</p>
         <ul id="admin-users">
+            
             @foreach( $requiredDocs as $doc) 
-                <li class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <div class="doc-info">
-                            <p class="doc-name">{{$doc->name}}</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex">
-                        <button type="button" class="edit-btn">
-                            <i class="fa-light fa-file-pen"></i>
-                        </button>
-
-                        <form method="POST" action="{{ route('settings.deleteRequirement', ['id' => $doc->id]) }}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="edit-btn">
-                                <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                        </form>
-                    </div>
-                </li>
+                @livewire('settings.requirement', ['doc' => $doc])
             @endforeach
         </ul>
         <form method="POST" action="{{ route('settings.createRequirement') }}" class= "d-flex">

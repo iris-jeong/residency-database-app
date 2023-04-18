@@ -95,7 +95,7 @@
 
     display: flex;
     align-items: center;
-    letter-spacing: 0.38px;
+    /* letter-spacing: 0.38px; */
     color: #535353;
 }
 
