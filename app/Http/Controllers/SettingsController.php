@@ -124,7 +124,8 @@ class SettingsController extends Controller
 
         //Update the requirement.
         $requirement = Requirement::find($requirementId);
-        $requirement->name = $request->input('requirement');
+        $requirement->name = $request->input('editedRequirement');
+
         $requirement->save();
 
         //Redirect.
