@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Demographic;
 use App\Models\AccessLevel;
+use App\Models\License;
+use App\Models\PgyLevel;
+use App\Models\Specialty;
 
 class SearchController extends Controller
 {
@@ -13,6 +16,9 @@ class SearchController extends Controller
         // $adminUsers = User::all();
         // $demographics = Demographic::all();
         $demographics = Demographic::select('user_id', 'pgy_level_id', 'specialty_id', 'phone_number')->get();
+        $pgyLevels = PgyLevel::all();
+        $specialties = Specialty::all();
+        $licenses = License::all();
 
         //Retrieve the number of admin users.
         // $numAdmins = count($adminUsers);
@@ -21,6 +27,9 @@ class SearchController extends Controller
         return view('search.index', [
             'demographicUsers' => $demographics, 
             'numDemographics' => $demographicsCount,
+            'licenses' => $licenses,
+            'pgyLevels' => $pgyLevels,
+            'specialties' => $specialties
         ]);
         // return view('search.index');
     }
