@@ -82,6 +82,11 @@
             </tr>
         </thead>
         <tbody>
+            @if($numDemographics == 0)
+            <tr>
+                <td colspan="7">No residents to display.</td>
+            </tr>
+            @endif
             @foreach( $demographicUsers as $demo ) 
                 <tr>
                     <td scope="row"></td>
