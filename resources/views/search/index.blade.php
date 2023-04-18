@@ -34,19 +34,19 @@
         <select class="form-select shadow-none" id="specialty-dropdown">
             <option value="0">Specialty</option>
             @foreach ($specialties as $specialty)
-                <option value="{{intdiv($specialty->id, 10) +1}}">{{$specialty->name}}</option>
+                <option value="{{$specialty->id}}">{{$specialty->name}}</option>
             @endforeach
         </select>
         <select class="form-select shadow-none" id="pgy-dropdown">
             <option value="0">PGY Level</option>
             @foreach ($pgyLevels as $pgyLevel)
-                <option value="{{intdiv($pgyLevel->id, 10) + 1}}">{{$pgyLevel->level}}</option>
+                <option value="{{$pgyLevel->id}}">{{$pgyLevel->level}}</option>
             @endforeach
         </select>
         <select class="form-select shadow-none" id="license-dropdown">
             <option value="0">License</option>
             @foreach ($licenses as $license)
-                <option value="{{intdiv($license->id, 10) + 1}}">{{$license->name}}</option>
+                <option value="{{$license->id}}">{{$license->name}}</option>
             @endforeach
         </select>
         <button class="btn btn-light" id="search-btn" type="button"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon"/>Search</button>
