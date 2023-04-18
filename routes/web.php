@@ -36,6 +36,7 @@ Route::post('/settings/admins', [SettingsController::class, 'createAdmin'])->nam
 Route::delete('/settings/admins', [SettingsController::class, 'removeAdmin'])->name('settings.removeAdmin');
 Route::get('/settings/requirements', [SettingsController::class, 'showRequirements'])->name('settings.requirements');
 Route::post('/settings/requirements', [SettingsController::class, 'createRequirement'])->name('settings.createRequirement');
+Route::delete('/settings/requirements/{id}/delete', [SettingsController::class, 'deleteRequirement'])->name('settings.deleteRequirement');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 

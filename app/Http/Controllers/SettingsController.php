@@ -84,10 +84,30 @@ class SettingsController extends Controller
             'name' => $request->input('requirement'),
         ]);
         $newRequirement->save();
-        
+
         //Redirect.
         return redirect()
             ->route('settings.requirements')
             ->with('success', "Successfully added '{$request->input('requirement')}' as a requirement.");
+    }
+
+    public function deleteRequirement($requirementId) {
+        //Retrieve the requirement.
+        $requirement = Requirement::find($requirementId);
+
+        //Validate.
+        if(!$requirement) {
+            return redirect()
+                ->route('settings.requirements')
+                ->with('error', 'Requirement not found.');
+        }
+
+        //Delete the requirement.
+        $requirement->delete();
+        
+        //Redirect.
+        return redirect()
+            ->route('settings.requirements')
+            ->with('success', "Successfully deleted the '{$requirement->name}' requirement.");
     }
 }

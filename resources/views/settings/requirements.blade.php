@@ -5,6 +5,12 @@
                 {{ session('success') }}
             </div>
         @endif
+        @if( session('error') )
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif 
+
         <div>
             <p id="every">Everyone</p>
             <p id="req-text">All residents and fellows are required to have these documents and licenses.</p>
@@ -20,9 +26,18 @@
                         </div>
                     </div>
 
-                    <div class="">
-                        <i class="fa-light fa-file-pen"></i>
-                        <i class="fa-regular fa-trash-can"></i>
+                    <div class="d-flex">
+                        <button type="button" class="edit-btn">
+                            <i class="fa-light fa-file-pen"></i>
+                        </button>
+
+                        <form method="POST" action="{{ route('settings.deleteRequirement', ['id' => $doc->id]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="edit-btn">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </form>
                     </div>
                 </li>
             @endforeach

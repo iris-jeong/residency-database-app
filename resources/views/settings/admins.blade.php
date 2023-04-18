@@ -35,7 +35,7 @@
 		</form>
 		<br>
 		<hr>
-		<br>
+		
 		<p> Admin Users <span id="admin-count">({{$numAdmins}} users)</span></p>
 
 		<ul id="admin-users">
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 
-					<form method="POST" action="{{ route('settings.removeAdmin', $admin->id) }}">
+					<form method="POST" action="{{ route('settings.removeAdmin') }}">
 						@csrf
 						@method('DELETE')
 						<input type="hidden" name="user_id" value="{{$admin->id}}">
