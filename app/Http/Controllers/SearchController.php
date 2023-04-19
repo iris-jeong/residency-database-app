@@ -36,16 +36,6 @@ class SearchController extends Controller
         // return view('search.index');
     }
     
-    public function test () {
-        return view('search.report.test');
-    }
-    public function demographic () {
-        return view('search.report.demographic');
-    }
-    public function license () {
-        return view('search.report.license');
-    }
-
     public function filteredSearch(Request $request) {
         // No need for validation (or maybe validate the name if there is some user input and only alphabetical letters are used?)
         // Gets the values from the input fields and dropdowns

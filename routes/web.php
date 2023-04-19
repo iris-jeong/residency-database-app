@@ -6,7 +6,7 @@ use App\Http\Controllers\BroadcastController;
 use App\Http\Controllers\NewResidentController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RunReportController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +21,11 @@ use App\Http\Controllers\RunReportController;
 
 Route::get('/', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
-
-Route::get('/search/testreport', [SearchController::class, 'test'])->name('search.test');
-Route::get('/search/demographicreport', [SearchController::class, 'demographic'])->name('search.demographic');
-Route::get('/search/licensereport', [SearchController::class, 'license'])->name('search.license');
 Route::get('/search', [SearchController::class, 'filteredSearch'])->name('search.filteredSearch');
+
+Route::get('/search/testreport', [ReportController::class, 'test'])->name('search.test');
+Route::get('/search/demographicreport', [ReportController::class, 'demographic'])->name('search.demographic');
+Route::get('/search/licensereport', [ReportController::class, 'license'])->name('search.license');
 
 Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
@@ -34,6 +34,7 @@ Route::get('/settings', [SettingsController::class, 'showAdmins'])->name('settin
 Route::get('/settings/admins', [SettingsController::class, 'showAdmins'])->name('settings.admins');
 Route::post('/settings/admins', [SettingsController::class, 'createAdmin'])->name('settings.createAdmin');
 Route::delete('/settings/admins', [SettingsController::class, 'removeAdmin'])->name('settings.removeAdmin');
+
 Route::get('/settings/requirements', [SettingsController::class, 'showRequirements'])->name('settings.requirements');
 Route::post('/settings/requirements', [SettingsController::class, 'createRequirement'])->name('settings.createRequirement');
 Route::delete('/settings/requirements/{id}/delete', [SettingsController::class, 'deleteRequirement'])->name('settings.deleteRequirement');
