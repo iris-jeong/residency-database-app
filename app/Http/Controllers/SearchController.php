@@ -17,7 +17,8 @@ class SearchController extends Controller
     public function index() {
         // $adminUsers = User::all();
         // $demographics = Demographic::all();
-        $demographics = Demographic::select('user_id', 'pgy_level_id', 'specialty_id', 'phone_number')->get();
+
+        $demographics = Demographic::with('user', 'pgyLevel', 'specialty')->get();
         $pgyLevels = PgyLevel::all();
         $specialties = Specialty::all();
         $licenses = License::all();
@@ -49,7 +50,7 @@ class SearchController extends Controller
         if(!empty($name) | !empty($pgyLevel) || !empty($specialty) || !empty($license)){
             // New array, add filters to array if not empty 
             $filters = [];
-            $demographicsQuery = Demographic::select('user_id', 'pgy_level_id', 'specialty_id', 'phone_number');
+            $demographicsQuery = Demographic::with('user', 'pgyLevel', 'specialty');
             if(!empty($name)){
                 $users = Demographic::whereHas('user', function ($query) use ($name) {
                     $query->where(DB::raw('CONCAT(LOWER(first_name), " ", LOWER(last_name))'), 'LIKE', '%'.$name.'%');
@@ -73,7 +74,7 @@ class SearchController extends Controller
             $demographics = $demographicsQuery->get();
         }
         else{
-            $demographics = Demographic::select('user_id', 'pgy_level_id', 'specialty_id', 'phone_number')->get();
+            $demographics = Demographic::with('user', 'pgyLevel', 'specialty')->get();
         }
         
         $pgyLevels = PgyLevel::all();
