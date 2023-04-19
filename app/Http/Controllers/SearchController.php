@@ -40,9 +40,9 @@ class SearchController extends Controller
         // No need for validation (or maybe validate the name if there is some user input and only alphabetical letters are used?)
         // Gets the values from the input fields and dropdowns
         $name = trim(($request->input('searchinput')));
-        $specialty = $request->input('specialty-dropdown');
-        $pgyLevel = $request->input('pgy-dropdown');
-        // $license = $request->input('license-dropdown');
+        $specialty = $request->input('selected_specialties');
+        $pgyLevel = $request->input('selected_pgy');
+        // $license = $request->input('selected_license');
         $request->flash();
 
         // Checks for any filters to use where clause. Otherwise, get all.
@@ -57,16 +57,20 @@ class SearchController extends Controller
                 $demographicsQuery->whereIn('user_id', $users->pluck('id'));
             }
             if(!empty($pgyLevel)){
-                $filters = Arr::add($filters, 'pgy_level_id', $pgyLevel);
+                $demographicsQuery->whereIn('pgy_level_id', $pgyLevel);
+                // $filters = Arr::add($filters, 'pgy_level_id', $pgyLevel);
             }
             if(!empty($specialty)){
-                $filters = Arr::add($filters, 'specialty_id', $specialty);
+                $demographicsQuery->whereIn('specialty_id', $specialty);
+                // $filters = Arr::add($filters, 'specialty_id', $specialty);
             }
             // if(!empty($license)){
+                // $demographicsQuery->whereIn('license_id', $license);
             //     $filters = Arr::add($filters, 'license_id', $license);
             // }
             
-            $demographics = $demographicsQuery->where($filters)->get();
+            // $demographics = $demographicsQuery->where($filters)->get();
+            $demographics = $demographicsQuery->get();
         }
         else{
             $demographics = Demographic::select('user_id', 'pgy_level_id', 'specialty_id', 'phone_number')->get();

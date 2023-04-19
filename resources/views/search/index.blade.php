@@ -31,7 +31,7 @@
     <div class="input-group mt-4" id="search-bar">
         <span class="input-group-text" id="search-bar-head"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon-head"/></span>
         <input type="text" id="searchinput" name="searchinput" placeholder="Enter name" class="form-control shadow-none" value="{{ old('searchinput') }}">
-        <select class="form-select shadow-none" id="specialty-dropdown" name="specialty-dropdown">
+        <!-- <select class="form-select shadow-none" id="specialty-dropdown" name="specialty-dropdown">
             <option value="">Specialty</option>
             @foreach ($specialties as $specialty)
                 <option value="{{$specialty->id}}"
@@ -40,27 +40,61 @@
                 @endif
                 >{{$specialty->name}}</option>
             @endforeach
-        </select>
-        <select class="form-select shadow-none" id="pgy-dropdown" name="pgy-dropdown">
-            <option value="">PGY Level</option>
+        </select> -->
+        <div class="btn-group" id="specialty-dropdown" name="specialty-dropdown">
+            <button class="btn btn-light dropdown-toggle shadow-none" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Specialty
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+            @foreach ($specialties as $specialty)
+                <li>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{$specialty->id}}" id="specialty{{$specialty->id}}" name="selected_specialties[]"
+                        @checked(in_array($specialty->id, old('selected_specialties', [])))>
+                        <label class="form-check-label" for="specialty{{$specialty->id}}">
+                        {{$specialty->name}}
+                        </label>
+                    </div>
+                </li>
+            @endforeach
+            </ul>
+        </div>
+        <div class="btn-group" id="pgy-dropdown" name="pgy-dropdown">
+            <button class="btn btn-light dropdown-toggle shadow-none" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                PGY Level
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
             @foreach ($pgyLevels as $pgyLevel)
-                <option value="{{$pgyLevel->id}}"
-                @if ($pgyLevel->id == old('pgy-dropdown'))
-                    selected="selected"
-                @endif
-                >{{$pgyLevel->level}}</option>
+                <li>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{$pgyLevel->id}}" id="pgy{{$pgyLevel->id}}" name="selected_pgy[]"
+                        @checked(in_array($pgyLevel->id, old('selected_pgy', [])))>
+                        <label class="form-check-label" for="pgy{{$pgyLevel->id}}">
+                        {{$pgyLevel->level}}
+                        </label>
+                    </div>
+                </li>
             @endforeach
-        </select>
-        <select class="form-select shadow-none" id="license-dropdown" name="license-dropdown">
-            <option value="">License</option>
+            </ul>
+        </div>
+        <div class="btn-group" name="license-dropdown" id="license-dropdown">
+            <button class="btn btn-light dropdown-toggle shadow-none" type="button" id="license-dropdown-btn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                License
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="license-dropdown-btn">
             @foreach ($licenses as $license)
-                <option value="{{$license->id}}"
-                @if ($license->id == old('license-dropdown'))
-                    selected="selected"
-                @endif
-                >{{$license->name}}</option>
+                <li>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{$license->id}}" id="license{{$license->id}}" name="selected_license[]"
+                        @checked(in_array($license->id, old('selected_license', [])))>
+                        <label class="form-check-label" for="license{{$license->id}}">
+                        {{$license->name}}
+                        </label>
+                    </div>
+                </li>
             @endforeach
-        </select>
+            </ul>
+        </div>
         <button class="btn btn-light" id="search-btn" type="submit"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon"/>Search</button>
     </div>
 </form>
