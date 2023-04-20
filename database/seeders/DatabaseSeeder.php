@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Demographic;
+use App\Models\File;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,8 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         User::truncate();
         Demographic::truncate();
+        File::truncate();
         
-        //Create 300 users in the Users table.
+        //Create 100 users in the Users table.
         $users = User::factory(100)->create();
 
         foreach($users as $user) {
@@ -26,5 +28,8 @@ class DatabaseSeeder extends Seeder
                 'user_id' => $user->id //This overrides the 'user_id' attribute in the DemographicFactory definition() method.
             ]);
         }
+
+        //Create 300 files in the Files table.
+        $files = File::factory(300)->create();
     }
 }
