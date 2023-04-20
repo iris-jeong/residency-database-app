@@ -1,16 +1,16 @@
 h1 {
-    color: #9A0000;
+    color: #9a0000;
     font-size: 36px;
 }
 
 .col a {
-display: block;
-height: 100%;
-width: 100%;
-color: black;
-margin-top: 5px;
-box-sizing: border-box;
-text-align: center;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: black;
+    margin-top: 5px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 button {
@@ -35,29 +35,35 @@ span {
 }
 
 thead {
-    background-color: #9A0000;
+    background-color: #9a0000;
     color: white;
     border-radius: 50%;
 }
 
 /* Check box Icon */
-.checkbox{
+.checkbox {
     height: 1.3em;
     margin: 0;
     padding-left: 0px;
 }
 
 .table-checkbox {
-    filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(0%) hue-rotate(316deg) brightness(115%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(0%)
+        hue-rotate(316deg) brightness(115%) contrast(101%);
 }
 
 .form-check-input {
     margin-left: 10px;
-    border-color: #9A0000;
+    border-color: #9a0000;
     cursor: pointer;
 }
 
 .form-check-input:checked {
-    background-color: #9A0000;
-    border-color: #9A0000;
+    background-color: #9a0000;
+    border-color: #9a0000;
+}
+
+th,
+td {
+    white-space: nowrap;
 }

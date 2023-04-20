@@ -169,9 +169,12 @@
 <x-alert-modal type="modal-sm" id="runReportModal">
     <x-slot name="title">Select a report to run</x-slot>
     <x-slot name="label">runReportModalLabel</x-slot>
+    <x-slot name="method">POST</x-slot>
+    <x-slot name="action">{{ route('report.show') }}</x-slot>
     <x-slot name="body">
+        <input type="hidden" name="queryString" value="{{ request()->getQueryString() }}">
         <div class="form-check">
-            <input class="form-check-input" class="runReportsRadios" value="demographics" type="radio" name="runreportsradio" id="demographics-radio">
+            <input class="form-check-input" class="runReportsRadios" value="demographic" type="radio" name="runreportsradio" id="demographics-radio">
             <label class="form-check-label" for="demographics-radio">
                 Demographics
             </label>
@@ -190,7 +193,7 @@
         </div>
     </x-slot>
     <x-slot name="footer">
-        <button type="button" class="btn btn-light" id="runReportModalBtn">Run Report</button>
+        <button type="submit" class="btn btn-light" id="runReportModalBtn">Run Report</button>
     </x-slot>
 </x-alert-modal>
 

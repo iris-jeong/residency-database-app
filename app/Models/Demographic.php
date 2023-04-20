@@ -20,6 +20,6 @@ class Demographic extends Model
     }
 
     public function pgyLevel() {
-        return $this->belongsTo(PgyLevel::class, "pgy_level_id");
+        return $this->belongsTo(PgyLevel::class);
     }
 }

@@ -23,6 +23,8 @@ Route::get('/', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::get('/search', [SearchController::class, 'filteredSearch'])->name('search.filteredSearch');
 
+Route::post('/search/report', [ReportController::class, 'show'])->name('report.show');
+
 Route::get('/search/testreport', [ReportController::class, 'test'])->name('search.test');
 Route::get('/search/demographicreport', [ReportController::class, 'demographic'])->name('search.demographic');
 Route::get('/search/licensereport', [ReportController::class, 'license'])->name('search.license');
