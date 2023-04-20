@@ -180,6 +180,8 @@
         <x-alert-modal type="" id="confirmDeleteModal">
             <x-slot name="title">Confirm Delete</x-slot>
             <x-slot name="label">confirmDeleteModalLabel</x-slot>
+            <x-slot name="method"></x-slot>
+            <x-slot name="action"></x-slot>
             <x-slot name="body">Are you sure you want to delete this automated broadcast?</x-slot>
             <x-slot name="footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
