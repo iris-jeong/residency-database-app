@@ -40,6 +40,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Test::class);
     }
 
+    public function files() {
+        return $this->belongsToMany(File::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

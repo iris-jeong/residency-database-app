@@ -12,4 +12,8 @@ class Test extends Model
     public function users() {
         return $this->belongsToMany(User::class);
     }
+    
+    public function files() {
+        return $this->belongsToMany(File::class);
+    }
 }
