@@ -161,7 +161,7 @@
             <a href="{{route('search.license')}}" class="nav-link">License Report</a>
         </li>
         <li id="profile" class="nav-item">
-            <a href="{{route('profile.index')}}" class="nav-link">Profile Page</a>
+            <a href="{{route('profile.requirements')}}" class="nav-link">Profile Page</a>
         </li>
     </ul>
 </div>
