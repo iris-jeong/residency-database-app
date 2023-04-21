@@ -16,6 +16,21 @@ return new class extends Migration
             $table->id();
             $table->string('name');
         });
+
+        $tests = [
+            "ABSITE",
+            "CARSITE",
+            "PSITE",
+            "TACC",
+            "TSITE",
+            "VSITE"
+        ];
+
+        foreach ($tests as $test) {
+            DB::table('tests')->insert([
+                'name' => $test,
+            ]);
+        }
     }
 
     /**
