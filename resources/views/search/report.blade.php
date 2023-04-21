@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Report')
+@section('title', $reportType . ' Report')
 
 @push('stylesheets')
 <link rel="stylesheet" href="{{ asset('css/runreports.css') }}">
@@ -17,7 +17,7 @@
             <h1>{{$reportType}} Report</h1>
         </div>
         <div class="col-7">
-            <button type="button" class="btn btn-sm btn-outline-dark" disabled>Cardiothoracic</button>
+            {{-- <button type="button" class="btn btn-sm btn-outline-dark" disabled>Cardiothoracic</button> --}}
         </div>
     </div>
 </div>
@@ -46,16 +46,31 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($demographics as $demographic)
+                @foreach($users as $user)
                     <tr>
                         <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
-                        <td>{{$demographic->user->first_name}} {{$demographic->user->last_name}}</td>
-                        <td><span class="level {{ str_replace(' ', '', $demographic->pgyLevel->level) }} badge rounded-pill">{{$demographic->pgyLevel->level}}</span></td>
-                        <td><u>{{$demographic->user->email}}</u></td>
-                        <td>{{$demographic->phone_number}}</td>
-                        <td>{{$demographic->npi_number}}</td>
-                        <td>{{$demographic->pager_number}}</td>
-                        <td>{{$demographic->address}}, {{$demographic->city}}, {{$demographic->state}} {{$demographic->zip}}</td>
+                        <td>{{$user->first_name}} {{$user->last_name}}</td>
+                        <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
+                        
+                        @if ($reportType === 'Demographic')
+                            <td><u>{{$user->demographic->email}}</u></td>
+                            <td>{{$user->demographic->phone_number}}</td>
+                            <td>{{$user->demographic->npi_number}}</td>
+                            <td>{{$user->demographic->pager_number}}</td>
+                            <td>{{$user->demographic->address}}, {{$user->demographic->city}}, {{$user->demographic->state}} {{$user->demographic->zip}}</td>
+                       
+                        @elseif ($reportType === 'Test')
+                            <td><u>{{$user->tests->first()->name}}</u></td>
+                            <td>{{$user->tests->first()->pivot->score}}</td>
+                        @else
+                            <td>1/3/21</td>
+                            <td>1/3/22</td>
+                            <td>2/05/18</td>
+                            <td>2/05/18</td>
+                            <td>2/05/18</td>
+                            <td>2/05/18</td>
+                            <td><div class="status status-good"></div></td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>
