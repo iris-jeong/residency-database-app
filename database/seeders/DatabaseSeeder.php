@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::truncate();
-        Demographic::truncate();
-        File::truncate();
+        // User::truncate();
+        // Demographic::truncate();
+        // File::truncate();
         
         //Create 100 users in the Users table.
         $users = User::factory(100)->create();

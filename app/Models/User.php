@@ -44,6 +44,9 @@ class User extends Authenticatable
         return $this->hasMany(File::class);
     }
 
+    public function userLicenses() {
+        return $this->hasMany(UserLicense::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

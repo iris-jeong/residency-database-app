@@ -16,4 +16,8 @@ class File extends Model
     public function tests() {
         return $this->belongsToMany(Test::class);
     }
+
+    public function userLicenses() {
+        return $this->hasMany(UserLicense::class);
+    }
 }
