@@ -758,6 +758,7 @@ class ComposerStaticInit4a88880fa8a7c4895d9dd7bc07e12b66
         'Database\\Factories\\DemographicFactory' => __DIR__ . '/../..' . '/database/factories/DemographicFactory.php',
         'Database\\Factories\\FileFactory' => __DIR__ . '/../..' . '/database/factories/FileFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Factories\\UserTestFactory' => __DIR__ . '/../..' . '/database/factories/UserTestFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DebugBar\\Bridge\\CacheCacheCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/CacheCacheCollector.php',
         'DebugBar\\Bridge\\DoctrineCollector' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Bridge/DoctrineCollector.php',

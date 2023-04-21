@@ -207,6 +207,7 @@ return array(
     'Database\\Factories\\DemographicFactory' => $baseDir . '/database/factories/DemographicFactory.php',
     'Database\\Factories\\FileFactory' => $baseDir . '/database/factories/FileFactory.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
+    'Database\\Factories\\UserTestFactory' => $baseDir . '/database/factories/UserTestFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'DebugBar\\Bridge\\CacheCacheCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/CacheCacheCollector.php',
     'DebugBar\\Bridge\\DoctrineCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/DoctrineCollector.php',
