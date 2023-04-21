@@ -9,8 +9,8 @@ class File extends Model
 {
     use HasFactory;
 
-    public function users() {
-        return $this->belongsToMany(User::class);
+    public function user() {
+        return $this->belongsTo(User::class);
     }
     
     public function tests() {

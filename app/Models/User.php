@@ -37,11 +37,11 @@ class User extends Authenticatable
     }
 
     public function tests() {
-        return $this->belongsToMany(Test::class);
+        return $this->belongsToMany(Test::class, 'user_test')->withPivot('score');
     }
 
     public function files() {
-        return $this->belongsToMany(File::class);
+        return $this->hasMany(File::class);
     }
 
     /**

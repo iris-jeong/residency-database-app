@@ -10,7 +10,7 @@ class Test extends Model
     use HasFactory;
 
     public function users() {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)->using(UserTest::class);
     }
     
     public function files() {
