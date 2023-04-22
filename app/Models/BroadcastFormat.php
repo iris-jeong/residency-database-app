@@ -9,6 +9,7 @@ use App\Models\Broadcasts;
 class BroadcastFormat extends Model
 {
     use HasFactory;
+    public $table = 'broadcast_format';
 
     // Formats have many broadcasts
     public function broadcasts() {

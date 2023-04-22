@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('broadcast', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("title");
-            $table->string("description");
+            $table->string("title", 50);
+            $table->string("description", 50);
             $table->boolean("freq_auto");
-            $table->integer("freq_count");
-            $table->integer("freq_period_id");
-            $table->integer("freq_start_id");
-            $table->string("message");
-            $table->multiLineString("attachments"); // each line of the string will be a url to the attachment
+            $table->integer("freq_count")->nullable();
+            $table->integer("freq_period_id")->nullable();
+            $table->integer("freq_start_id")->nullable();
+            $table->string("message", 200);
+            $table->multiLineString("attachments")->nullable(); // each line of the string will be a url to the attachment
             $table->integer("format_id");
             // data types on laravel
             // $table->data_type('column_name');

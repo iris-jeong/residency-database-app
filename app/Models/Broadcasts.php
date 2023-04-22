@@ -11,6 +11,7 @@ use App\Models\FrequencyStartFrom;
 class Broadcasts extends Model
 {
     use HasFactory;
+    public $table = 'broadcast';
 
     //A broadcast has one format
     public function broadcastFormat() {
