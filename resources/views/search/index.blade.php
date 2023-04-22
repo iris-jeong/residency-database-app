@@ -31,16 +31,6 @@
     <div class="input-group mt-4" id="search-bar">
         <span class="input-group-text" id="search-bar-head"><img src="{{asset('icons/search.svg')}}" class="icons" id="search-bar-icon-head"/></span>
         <input type="text" id="searchinput" name="searchinput" placeholder="Enter name" class="form-control shadow-none" value="{{ old('searchinput') }}">
-        <!-- <select class="form-select shadow-none" id="specialty-dropdown" name="specialty-dropdown">
-            <option value="">Specialty</option>
-            @foreach ($specialties as $specialty)
-                <option value="{{$specialty->id}}"
-                @if ($specialty->id == old('specialty-dropdown'))
-                    selected="selected"
-                @endif
-                >{{$specialty->name}}</option>
-            @endforeach
-        </select> -->
         <div class="btn-group" id="specialty-dropdown" name="specialty-dropdown">
             <button class="btn btn-light dropdown-toggle shadow-none" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                 Specialty
