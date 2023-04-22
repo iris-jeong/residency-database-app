@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        UserLicense::truncate();
         //Comment and uncomment the calls to run specific seeders as needed.
         //If seeding from fresh, uncomment all.
 

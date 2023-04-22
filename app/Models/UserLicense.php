@@ -18,7 +18,7 @@ class UserLicense extends Model
     }
 
     public function license() {
-        return $this->belongsTo(License::class)->withPivot('expiration_date');
+        return $this->belongsTo(License::class);
     }
 
     public function file() {

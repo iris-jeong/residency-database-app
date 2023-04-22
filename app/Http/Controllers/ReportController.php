@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Demographic;
 use App\Models\UserTest;
+use App\Models\UserLicense;
 
 class ReportController extends Controller
 {
@@ -22,14 +23,16 @@ class ReportController extends Controller
         $licenses = isset($filters['selected_license']) ? $filters['selected_license'] : null;
         
         //Write queries to retrieve information for the reports.
-        $usersQuery = User::join('demographics', 'users.id', '=', 'demographics.user_id')->with('tests');
+        $usersQuery = User::join('demographics', 'users.id', '=', 'demographics.user_id')
+            ->with('tests', 'licenses', 'files', 'demographic', 'demographic.pgyLevel');
+
         //Add name to the query.
         if($name) {
             $users = User::where(function ($query) use ($name) {
                 $query->where('first_name', 'like', '%' . strtolower($name) . '%')
                     ->orWhere('last_name', 'like', '%' . strtolower($name) . '%');
             })->get();
-            $usersQuery->whereIn('id', $users->pluck('id'));
+            $usersQuery->whereIn('users.id', $users->pluck('id'));
         }
         //Add specialties to the query.
         if($specialties) {
@@ -43,8 +46,9 @@ class ReportController extends Controller
         if($licenses) {
             $usersQuery->whereIn('license_id', $license);
         }
-        $users = $usersQuery->get();
+        $users = $usersQuery->distinct()->get();
 
+        // return $users;
         //Retrieve the type of report.
         $reportType = ucfirst($request->input('runreportsradio'));
         
@@ -54,8 +58,11 @@ class ReportController extends Controller
         }
         else if($reportType === 'Test') {
             $columns = ['Test', 'Score'];
-        } 
-        
+        } else {
+            $columns = ['ACLS', 'ATLS', 'BLS', 'CML', 'DEA', 'FCCS', ''];
+        }
+
+        // return $users;
         return view('search.report', [
             'columns' => $columns,
             'users' => $users,

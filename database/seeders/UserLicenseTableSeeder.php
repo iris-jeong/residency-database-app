@@ -13,7 +13,7 @@ class UserLicenseTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //Create 200 user licenses in the 'user_license' table.
-        $userLicenses = UserLicense::factory(200)->create();
+        //Create 400 user licenses in the 'user_license' table.
+        $userLicenses = UserLicense::factory(800)->create();
     }
 }

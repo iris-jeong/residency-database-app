@@ -67,3 +67,12 @@ th,
 td {
     white-space: nowrap;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover {
+    color: #9a0000;
+}

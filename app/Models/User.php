@@ -44,8 +44,8 @@ class User extends Authenticatable
         return $this->hasMany(File::class);
     }
 
-    public function userLicenses() {
-        return $this->hasMany(UserLicense::class);
+    public function licenses() {
+        return $this->belongsToMany(License::class, 'user_license')->withPivot('expiration_date');
     }
     /**
      * The attributes that are mass assignable.

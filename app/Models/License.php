@@ -9,11 +9,7 @@ class License extends Model
 {
     use HasFactory;
     
-    public function userLicenses() {
-        return $this->hasMany(UserLicense::class);
-    }
-
     public function users() {
-        return $this->belongsToMany(User::class, 'user_license')->withPivot('expiration_date');
+        return $this->belongsToMany(User::class, 'user_license')->using(UserLicense::class);
     }
 }

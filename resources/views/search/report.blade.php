@@ -9,6 +9,7 @@
 
 @section('content')
 <div id="test-score-header">
+    <br>
     <div class="row">
         <div class="col">
             <a href="/search"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
@@ -21,7 +22,7 @@
         </div>
     </div>
 </div>
-
+<br>
 <div id="test-score-report">
     <div class="row">
         <div class="col-2">
@@ -53,7 +54,7 @@
                         <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
                         
                         @if ($reportType === 'Demographic')
-                            <td><u>{{$user->demographic->email}}</u></td>
+                            <td><u>{{$user->email}}</u></td>
                             <td>{{$user->demographic->phone_number}}</td>
                             <td>{{$user->demographic->npi_number}}</td>
                             <td>{{$user->demographic->pager_number}}</td>
@@ -63,13 +64,31 @@
                             <td><u>{{$user->tests->first()->name}}</u></td>
                             <td>{{$user->tests->first()->pivot->score}}</td>
                         @else
-                            <td>1/3/21</td>
-                            <td>1/3/22</td>
-                            <td>2/05/18</td>
-                            <td>2/05/18</td>
-                            <td>2/05/18</td>
-                            <td>2/05/18</td>
-                            <td><div class="status status-good"></div></td>
+                            @php
+                                $missingLicense = false;
+                            @endphp
+
+                            @foreach ($columns as $column)
+                                @php
+                                    $license = $user->licenses->firstWhere('name', $column);   
+                                @endphp
+                                @if ($column != '')
+                                    @if($license)
+                                        <td>
+                                            <a href="#">{{$license->pivot->expiration_date}}</a>
+                                        </td>
+                                    @else
+                                        @php
+                                            $missingLicense = true;
+                                        @endphp
+                                        <td></td>
+                                    @endif
+                                @else
+                                    <td>
+                                        <div class="status status-{{$missingLicense ? 'bad' : 'good'}}"></div>
+                                    </td>
+                                @endif
+                            @endforeach
                         @endif
                     </tr>
                 @endforeach
