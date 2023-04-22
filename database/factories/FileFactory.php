@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\File;
 use App\Models\User;
+use App\Models\Requirement;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\File>
@@ -24,7 +25,8 @@ class FileFactory extends Factory
         return [
             'name' => fake()->unique()->words(3, true),
             'path' => fake()->unique()->url(),
-            'user_id' => User::pluck('id')->random() //This selects an existing user from the 'users' table.
+            'user_id' => User::pluck('id')->random(), //This selects an existing user from the 'users' table.
+            'requirement_id' => Requirement::pluck('id')->random(),
         ];
     }
 }

@@ -9,6 +9,7 @@ use App\Models\Demographic;
 use App\Models\File;
 use App\Models\UserTest;
 use App\Models\UserLicense;
+use DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Disable foreign key constraints
+        // DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        // File::truncate();
+        // Re-enable foreign key constraints
+        // DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
         //Comment and uncomment the calls to run specific seeders as needed.
         //If seeding from fresh, uncomment all.
 
