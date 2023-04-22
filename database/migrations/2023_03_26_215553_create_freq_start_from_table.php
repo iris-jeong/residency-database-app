@@ -16,6 +16,25 @@ return new class extends Migration
             $table->timestamps();
             $table->string("start_from");
         });
+
+        $starts = [
+            '6 months before due',
+            '5 months before due',
+            '4 months before due',
+            '3 months before due',
+            '2 months before due',
+            '1 month before due',
+            '2 weeks before due',
+            '1 week before due',
+            'day of due date',
+            'day after due date'
+        ];
+    
+        foreach ($starts as $start) {
+            DB::table('freq_start_from')->insert([
+                'start_from' => $start,
+            ]);
+        }
     }
 
     /**
