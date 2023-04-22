@@ -1,23 +1,5 @@
 $(document).ready(function(){
-
-    $('.tab-menu a').click(function(event) {
-        event.preventDefault();
-        
-        // Toggle active class on tab buttons
-        $(this).parent().addClass("current");
-        $(this).parent().siblings().removeClass("current");
-        
-        // display only active tab content
-        var activeTab = $(this).attr("href");
-        $('.tabcontent').not(activeTab).css("display","none");
-        $(activeTab).fadeIn();
     
-    });
-
-    $('#create-profile').click(function(event) {
-        // event.preventDefault();
-    });
-
     $('#autoSwitch').click(function() {
         if($(this).is(':checked')){
             $('.disable').prop("disabled", true);
@@ -46,12 +28,4 @@ $(document).ready(function(){
             }
         })
     })
-
-    // window.addEventListener('click', function(e){   
-    //     if (document.getElementById('clickbox').contains(e.target)){
-    //       // Clicked in box
-    //     } else{
-    //       // Clicked outside the box
-    //     }
-    //   });
 });

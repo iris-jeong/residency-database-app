@@ -29,7 +29,11 @@ Route::get('/search/testreport', [ReportController::class, 'test'])->name('searc
 Route::get('/search/demographicreport', [ReportController::class, 'demographic'])->name('search.demographic');
 Route::get('/search/licensereport', [ReportController::class, 'license'])->name('search.license');
 
-Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
+// Route::get('/broadcast', [BroadcastController::class, 'index'])->name('broadcast.index');
+Route::get('/broadcast', [BroadcastController::class, 'showCustomMessage'])->name('broadcast.custom-message');
+Route::get('/broadcast/custom-message', [BroadcastController::class, 'showCustomMessage'])->name('broadcast.custom-message');
+Route::get('/broadcast/automated-alerts', [BroadcastController::class, 'showAutomatedAlerts'])->name('broadcast.automated-alerts');
+
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 
 Route::get('/settings', [SettingsController::class, 'showAdmins'])->name('settings.admins');

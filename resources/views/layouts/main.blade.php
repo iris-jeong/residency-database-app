@@ -29,7 +29,7 @@
                 <a href="{{route('search.index')}}" class="nav-link"><img src="{{asset('icons/search.svg')}}" class="icons"/> Search</a>
             </li>
             <li id="broadcast" class="nav-item">
-                <a href="{{route('broadcast.index')}}" class="nav-link"><img src="{{asset('icons/letter.svg')}}" class="icons"/> Broadcast</a>
+                <a href="{{route('broadcast.custom-message')}}" class="nav-link"><img src="{{asset('icons/letter.svg')}}" class="icons"/> Broadcast</a>
             </li>
             <li id="add-resident" class="nav-item">
                 <a href="{{route('new.index')}}" class="nav-link"><img src="{{asset('icons/plus-circle.svg')}}" class="icons"/> Add New Resident</a>
