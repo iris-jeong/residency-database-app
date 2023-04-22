@@ -11,12 +11,14 @@ use App\Models\PgyLevel;
 use App\Models\Specialty;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class SearchController extends Controller
 {
     public function index() {
         // $adminUsers = User::all();
         // $demographics = Demographic::all();
+        Session::flush();
 
         $demographics = Demographic::with('user', 'pgyLevel', 'specialty')->get();
         $pgyLevels = PgyLevel::all();
