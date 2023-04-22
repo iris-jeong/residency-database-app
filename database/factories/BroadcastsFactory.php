@@ -23,7 +23,7 @@ class BroadcastsFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->realText(50, 1),
+            'title' => fake()->catchPhrase(),
             'description' => fake()->text(50),
             'message' => fake()->text(200),
             'freq_auto' => fake()->randomElement([TRUE, FALSE]),
