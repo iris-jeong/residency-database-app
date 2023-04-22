@@ -9,10 +9,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($broadcasts as $broadcast)
             <tr>
-                <th scope="row" >License Renewal</th>
-                <td>Notification about license renewal</td>
-                <td>Auto</td>
+                <th scope="row">{{$broadcast->title}}</th>
+                <td>{{$broadcast->description}}</td>
+                <td>
+                    @if($broadcast->freq_auto)
+                        Auto
+                    @else
+                        {{$broadcast->freq_count}}x / {{$broadcast->freqPeriod->period}}
+                    @endif
+                </td>
                 <td class="kebab">:</td>
                 <td class="kebab-menu hidden">
                     <div class="kebab-div">
@@ -22,58 +29,7 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">Missing Document</th>
-                <td>Requesting a required document from resident</td>
-                <td>1x / month</td>
-                <td class="kebab">:</td>
-                <td class="kebab-menu hidden">
-                    <div class="kebab-div">
-                        <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
-                        <hr />
-                        <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">Update Demographics</th>
-                <td>Reminder to update demographics</td>
-                <td>1x / year</td>
-                <td class="kebab">:</td>
-                <td class="kebab-menu hidden">
-                    <div class="kebab-div">
-                        <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
-                        <hr />
-                        <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
-                    </div>
-                </td>               
-            </tr>
-            <tr>
-                <th scope="row">Update Demographics</th>
-                <td>Reminder to update demographics</td>
-                <td>1x / year</td>
-                <td class="kebab">:</td>
-                <td class="kebab-menu hidden">
-                    <div class="kebab-div">
-                        <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
-                        <hr />
-                        <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
-                    </div>
-                </td>               
-            </tr>
-            <tr>
-                <th scope="row">Update Demographics</th>
-                <td>Reminder to update demographics</td>
-                <td>1x / year</td>
-                <td class="kebab">:</td>
-                <td class="kebab-menu hidden">
-                    <div class="kebab-div">
-                        <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
-                        <hr />
-                        <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
-                    </div>
-                </td>              
-            </tr>
+            @endforeach
         </tbody>
     </table>
     <div id="alertbtn-div"><button type="button" class="btn btn-outline-dark mb-3" id="newAlertBtn" data-bs-toggle="modal" data-bs-target="#newBroadcastModal">Create New Automated Broadcast</button></div>

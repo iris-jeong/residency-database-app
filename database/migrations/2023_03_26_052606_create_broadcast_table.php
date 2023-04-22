@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string("title", 50);
-            $table->string("description", 50);
+            $table->string("description", 200);
             $table->boolean("freq_auto");
             $table->integer("freq_count")->nullable();
             $table->integer("freq_period_id")->nullable();

@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FreqStartFrom extends Model
+class FrequencyPeriod extends Model
 {
     use HasFactory;
-    public $table = 'freq_start_from';
+    public $table = 'freq_period';
     // Formats have many broadcasts
     public function broadcasts() {
         return $this->hasMany(Broadcasts::class);

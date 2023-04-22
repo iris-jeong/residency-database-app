@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Broadcasts;
 use Illuminate\Http\Request;
 
 class BroadcastController extends Controller
@@ -15,6 +16,9 @@ class BroadcastController extends Controller
     }
 
     public function showAutomatedAlerts() {
-        return view('broadcast.automated-alerts');
+        $automated_broadcasts = Broadcasts::all(); // Gets all the broadcasts in the broadcast table
+
+
+        return view('broadcast.automated-alerts', ['broadcasts' => $automated_broadcasts]);
     }
 }
