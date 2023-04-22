@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        UserLicense::truncate();
         //Comment and uncomment the calls to run specific seeders as needed.
         //If seeding from fresh, uncomment all.
 
@@ -25,6 +24,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(DemographicsTableSeeder::class);
         // $this->call(FilesTableSeeder::class);
         // $this->call(UserTestTableSeeder::class);
-        $this->call(UserLicenseTableSeeder::class);
+        // $this->call(UserLicenseTableSeeder::class);
     }
 }

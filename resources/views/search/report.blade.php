@@ -26,7 +26,7 @@
 <div id="test-score-report">
     <div class="row">
         <div class="col-2">
-        <p>{{$reportType}} Report</p>
+        <p class="fw-medium">{{$reportType}} Report</p>
         </div>
         <div class="col-sm">
         <i class="fa-regular fa-arrow-down-to-bracket"></i>
@@ -50,7 +50,9 @@
                 @foreach($users as $user)
                     <tr>
                         <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
-                        <td>{{$user->first_name}} {{$user->last_name}}</td>
+                        <td>
+                            <a href="{{route('profile.index', [ 'id' => $user->id ] )}}">{{$user->first_name}} {{$user->last_name}}</a>
+                        </td>
                         <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
                         
                         @if ($reportType === 'Demographic')

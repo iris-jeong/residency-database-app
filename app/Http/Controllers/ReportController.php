@@ -47,8 +47,7 @@ class ReportController extends Controller
             $usersQuery->whereIn('license_id', $license);
         }
         $users = $usersQuery->distinct()->get();
-
-        // return $users;
+        
         //Retrieve the type of report.
         $reportType = ucfirst($request->input('runreportsradio'));
         
@@ -62,7 +61,6 @@ class ReportController extends Controller
             $columns = ['ACLS', 'ATLS', 'BLS', 'CML', 'DEA', 'FCCS', ''];
         }
 
-        // return $users;
         return view('search.report', [
             'columns' => $columns,
             'users' => $users,

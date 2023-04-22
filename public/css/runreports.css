@@ -76,3 +76,6 @@ a {
 a:hover {
     color: #9a0000;
 }
+svg {
+    width: 24px;
+}
