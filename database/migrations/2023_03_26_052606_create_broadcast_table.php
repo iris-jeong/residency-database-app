@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('broadcast', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("to", 100);
             $table->string("title", 50);
             $table->string("description", 200);
-            $table->boolean("freq_auto");
+            $table->boolean("freq_auto")->nullable();
             $table->integer("freq_count")->nullable();
             $table->integer("freq_period_id")->nullable();
             $table->integer("freq_start_id")->nullable();

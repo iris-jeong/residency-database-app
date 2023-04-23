@@ -27,4 +27,18 @@ class Broadcasts extends Model
     public function freqStartFrom() {
         return $this->belongsTo(FrequencyStartFrom::class);
     }
+
+    protected $fillable = [
+        'to',
+        'title',
+        'message',
+        'description',
+        'freq_auto',
+        'freq_count',
+        'freq_period_id',
+        'freq_start_id',
+        'message',
+        'attachments',
+        'format_id'
+    ];
 }
