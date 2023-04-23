@@ -21,8 +21,12 @@ button {
     padding-top: 30px;
 }
 
-#test-score-report .row .col-2 p {
-    font-weight: bold;
+#test-score-report .description {
+    display: flex;
+}
+.info {
+    margin-right: 4px;
+    margin-left: 4px;
 }
 
 u {

@@ -24,13 +24,16 @@
 </div>
 <br>
 <div id="test-score-report">
-    <div class="row">
-        <div class="col-2">
-        <p class="fw-medium">{{$reportType}} Report</p>
+    <div class="description">
+        <div class="info">
+            <p class="fw-medium info">
+                {{$reportType}} Report 
+                <span class="info">({{$numUsers}} Results)</span>
+            </p>
         </div>
-        <div class="col-sm">
-        <i class="fa-regular fa-arrow-down-to-bracket"></i>
-        <span>(0 Selected)</span>
+        <div class="info">
+            <i class="fa-regular fa-arrow-down-to-bracket info"></i>
+            <span>(0 Selected)</span>
         </div>
     </div>
 
@@ -51,9 +54,21 @@
                     <tr>
                         <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
                         <td>
-                            <a href="{{route('profile.index', [ 'id' => $user->id ] )}}">{{$user->first_name}} {{$user->last_name}}</a>
+                            <a href="{{route('profile.index', [ 'id' => $user->id ] )}}">
+                                {{$user->first_name}} {{$user->last_name}}
+                            </a>
                         </td>
-                        <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
+                        {{-- <td>
+                            <span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">
+                                {{$user->demographic->pgyLevel->level}}
+                            </span>
+                        </td> --}}
+                        @if($user->demographic)
+    <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
+@else
+    <td><span class="badge rounded-pill">N/A</span></td>
+@endif
+
                         
                         @if ($reportType === 'Demographic')
                             <td><u>{{$user->email}}</u></td>

@@ -21,10 +21,10 @@ class ReportController extends Controller
         $specialties = isset($filters['selected_specialties']) ? $filters['selected_specialties'] : null;
         $pgyLevel = isset($filters['selected_pgy']) ? $filters['selected_pgy'] : null;
         $licenses = isset($filters['selected_license']) ? $filters['selected_license'] : null;
-        
+
         //Write queries to retrieve information for the reports.
         $usersQuery = User::join('demographics', 'users.id', '=', 'demographics.user_id')
-            ->with('tests', 'licenses', 'files', 'demographic', 'demographic.pgyLevel');
+            ->with('tests', 'licenses', 'files', 'demographic', 'demographic.pgyLevel', 'userLicenses');
 
         //Add name to the query.
         if($name) {
@@ -44,10 +44,17 @@ class ReportController extends Controller
         }
         //Add licenses to the query.
         if($licenses) {
-            $usersQuery->whereIn('license_id', $license);
+            foreach ($licenses as $index => $license) {
+                $alias = 'ul' . ($index + 1);
+                $usersQuery->join('user_license AS ' . $alias, function($join) use ($license, $alias) {
+                    $join->on('users.id', '=', $alias . '.user_id')
+                    ->where($alias . '.license_id', '=', $license);
+                });
+            }
         }
-        $users = $usersQuery->distinct()->get();
-        
+        $users = $usersQuery->select('users.*')->distinct('users.id')->get();
+        $numUsers = count($users);
+
         //Retrieve the type of report.
         $reportType = ucfirst($request->input('runreportsradio'));
         
@@ -64,6 +71,7 @@ class ReportController extends Controller
         return view('search.report', [
             'columns' => $columns,
             'users' => $users,
+            'numUsers' => $numUsers,
             'reportType' => $reportType,
         ]);
     }
