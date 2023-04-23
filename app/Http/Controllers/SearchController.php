@@ -45,14 +45,14 @@ class SearchController extends Controller
         $name = trim(($request->input('searchinput')));
         $specialty = $request->input('selected_specialties');
         $pgyLevel = $request->input('selected_pgy');
-        // $license = $request->input('selected_license');
+        $license = $request->input('selected_license');
         $request->flash();
 
         // Checks for any filters to use where clause. Otherwise, get all.
         if(!empty($name) | !empty($pgyLevel) || !empty($specialty) || !empty($license)){
             // New array, add filters to array if not empty 
             $filters = [];
-            $demographicsQuery = Demographic::with('user', 'pgyLevel', 'specialty');
+            $demographicsQuery = Demographic::with('user', 'pgyLevel', 'specialty', 'user.licenses');
             if(!empty($name)){
                 $users = Demographic::whereHas('user', function ($query) use ($name) {
                     $query->where(DB::raw('CONCAT(LOWER(first_name), " ", LOWER(last_name))'), 'LIKE', '%'.$name.'%');
@@ -67,11 +67,14 @@ class SearchController extends Controller
                 $demographicsQuery->whereIn('specialty_id', $specialty);
                 // $filters = Arr::add($filters, 'specialty_id', $specialty);
             }
-            // if(!empty($license)){
+            if(!empty($license)){
+                $users = User::whereHas('licenses', function ($query) use ($license) {
+                    $query->where('license_id', $license);
+                })->get();
+                $demographicsQuery->whereIn('user_id', $users->pluck('id'));
                 // $demographicsQuery->whereIn('license_id', $license);
             //     $filters = Arr::add($filters, 'license_id', $license);
-            // }
-            
+            }
             // $demographics = $demographicsQuery->where($filters)->get();
             $demographics = $demographicsQuery->get();
         }
