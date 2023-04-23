@@ -4,6 +4,7 @@
             {{ session('success') }}
         </div>
     @endif
+    <input type="hidden" id="errors-exist" value="{{$errors->any() ? '1' : '0'}}"></p>
     <table class="table" id="auto-alerts-table">
         <thead >
             <tr id="automated-alerts-header">
@@ -68,5 +69,16 @@
             <button type="button" class="btn btn-danger">Delete</button>
         </x-slot>
     </x-alert-modal>
+
+    
+    @push('scripts')
+    <script>
+        $(window).on('load', function(){
+            if($("#errors-exist").val() == '1'){
+                $('#newBroadcastModal').modal('show');
+            }
+        });
+    </script>
+    @endpush
 
 </x-layouts.broadcast>
