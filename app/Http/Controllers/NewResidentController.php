@@ -60,7 +60,7 @@ class NewResidentController extends Controller
 
         //Redirect user.
         return redirect()
-            ->route('profile.all')
+            ->route('profile.requirements', ['id' => $newUser->id ])
             ->with('success', "Sucessfully created new profile.");
     }
 }

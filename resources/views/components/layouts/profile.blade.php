@@ -45,8 +45,8 @@
             </div>
 
             <x-tabmenu.tabs>
-                <x-tabmenu.tab title="Required Documents" route="profile.requirements">Required Documents</x-tabmenu.tab>
-                <x-tabmenu.tab title="All Files" route="profile.all">All Files</x-tabmenu.tab>
+                <x-tabmenu.tab title="Required Documents" route="{{ route('profile.requirements', ['id' => $id]) }}">Required Documents</x-tabmenu.tab>
+                <x-tabmenu.tab title="All Files" route="{{ route('profile.all', ['id' => $id]) }}">All Files</x-tabmenu.tab>
             </x-tabmenu.tabs>
 
             <x-alert-modal type="" id="uploadModal">

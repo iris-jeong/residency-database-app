@@ -9,8 +9,8 @@
 	<br>
 	<div id="settings-container" >
 		<x-tabmenu.tabs>
-			<x-tabmenu.tab title="Admin Members" route="settings.admins">Admin Members</x-tabmenu.tab>
-			<x-tabmenu.tab title="Requirements" route="settings.requirements">Requirements</x-tabmenu.tab>
+			<x-tabmenu.tab title="Admin Members" route="{{ route('settings.admins') }}">Admin Members</x-tabmenu.tab>
+			<x-tabmenu.tab title="Requirements" route="{{ route('settings.requirements') }}">Requirements</x-tabmenu.tab>
 		</x-tabmenu.tabs>
 
 		<hr class="mt-0">

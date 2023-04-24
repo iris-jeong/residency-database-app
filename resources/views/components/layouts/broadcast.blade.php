@@ -9,8 +9,8 @@
     <h1>Broadcast</h1>
     <div class="broadcast-container">
 		<x-tabmenu.tabs>
-			<x-tabmenu.tab title="Custom Message" route="broadcast.custom-message">Custom Message</x-tabmenu.tab>
-			<x-tabmenu.tab title="Automated Alerts" route="broadcast.automated-alerts">Automated Alerts</x-tabmenu.tab>
+			<x-tabmenu.tab title="Custom Message" route="{{ route('broadcast.custom-message') }}">Custom Message</x-tabmenu.tab>
+			<x-tabmenu.tab title="Automated Alerts" route="{{ route('broadcast.automated-alerts') }}">Automated Alerts</x-tabmenu.tab>
 		</x-tabmenu.tabs>
 
 		<hr class="mb-3">

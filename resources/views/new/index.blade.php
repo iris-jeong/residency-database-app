@@ -191,9 +191,9 @@
 
 			<div class= "confirmation d-flex justify-content-between">
 				<button type="reset" class="btn button1">Clear</button>
-
-				<button type="submit" class="btn button2" id="create-profile">Create profile</button>
-
+				<form method="POST" action="{{ route('new.create') }}">
+					<button type="submit" class="btn button2" id="create-profile">Create profile</button>
+				</form>
 			</div>
 		<form>
 	</div>
