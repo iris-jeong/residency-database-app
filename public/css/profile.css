@@ -37,3 +37,54 @@
    border: 2px solid;
    border-color: #FFD8D8;
 }
+
+.tab-menu {
+   width: 35%;
+   list-style: none;
+   margin: 0;
+   margin-bottom: 2.5px;
+}
+
+.tab-menu li {
+   padding-bottom: 0.5em;
+}
+
+.tab-menu a {
+   text-decoration: none;
+   color: black;
+   text-align: center;
+   margin: 0;
+   padding-bottom: 0.5em;
+   transition: border 0.1s ease-in-out;
+}
+
+.tab-menu a:hover,
+.current a {
+   border-bottom: 5px solid #fedb56;
+}
+
+.current a {
+   font-weight: 500;
+}
+
+.tabcontent {
+   width: 100%;
+   margin: 0 auto;
+}
+
+i {
+   margin-right: 10px;
+}
+
+.upload-btn {
+   background-color: #9a0000;
+   border-color: #9a0000;
+   color: #ffffff;
+   margin-bottom: 0px;
+}
+
+.upload-btn:hover {
+   background-color: #ffffff;
+   border-color: #9a0000;
+   color: #9a0000;
+}

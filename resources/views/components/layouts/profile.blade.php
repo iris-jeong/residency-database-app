@@ -3,6 +3,7 @@
 @push('stylesheets')
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 @endpush
 
 @section('content')
@@ -36,10 +37,29 @@
                 </div>
             </div>
 
+            <div class="row col-sm-12">
+                <div class="col-sm-10"></div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn upload-btn" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="bi bi-upload"></i>Upload</button>
+                </div>
+            </div>
+
             <x-tabmenu.tabs>
                 <x-tabmenu.tab title="Required Documents" route="profile.requirements">Required Documents</x-tabmenu.tab>
                 <x-tabmenu.tab title="All Files" route="profile.all">All Files</x-tabmenu.tab>
             </x-tabmenu.tabs>
+
+            <x-alert-modal type="" id="uploadModal">
+                <x-slot name="title">Upload Files</x-slot>
+                <x-slot name="label">uploadModalLabel</x-slot>
+                <x-slot name="method"></x-slot>
+                <x-slot name="action"></x-slot>
+                <x-slot name="body"><input class="form-control" type="file" id="formFileMultiple" multiple></x-slot>
+                <x-slot name="footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </x-slot>
+            </x-alert-modal>
 
             <hr class="mt-0">
 
