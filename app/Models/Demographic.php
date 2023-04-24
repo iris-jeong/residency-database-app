@@ -9,6 +9,20 @@ class Demographic extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'birth_date',
+        'sex',
+        'address',
+        'city',
+        'zip',
+        'phone_number',
+        'npi_number',
+        'pager_number',
+        'pgy_level_id',
+        'specialty_id',
+        'user_id',
+    ];
+
     //A demographic belongs to a user.
     public function user() {
         return $this->belongsTo(User::class, "user_id");
