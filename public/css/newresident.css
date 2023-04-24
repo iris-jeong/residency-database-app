@@ -1,4 +1,4 @@
-.new-resident-container{
+.new-resident-container {
     width: 60%;
     margin: 0 auto;
 }
@@ -7,21 +7,22 @@
     color: red;
 }
 
-.sex p{
+.sex p {
     margin: 0;
 }
 
 .button1 {
-    color: black;
-    background-color: rgb(209, 209, 209);
+    color: #414141;
+    background-color: #dfdfdf;
 }
 
 .button2 {
     color: white;
     background-color: #9a0000;
+    padding: 10px 20px;
 }
 
 .button2:hover {
     color: white;
-    background-color: #9a0000;
+    background-color: #890000;
 }

@@ -36,6 +36,7 @@ Route::get('/broadcast/automated-alerts', [BroadcastController::class, 'showAuto
 Route::post('/broadcast/automated-alerts', [BroadcastController::class, 'createBroadcast'])->name('broadcast.createBroadcast');
 
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
+Route::post('/new', [NewResidentController::class, 'create'])->name('new.create');
 
 Route::get('/settings', [SettingsController::class, 'showAdmins'])->name('settings.admins');
 Route::get('/settings/admins', [SettingsController::class, 'showAdmins'])->name('settings.admins');

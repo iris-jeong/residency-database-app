@@ -148,9 +148,8 @@ label {
     color: #ffffff;
 }
 .add-btn:hover {
-    background-color: #ffffff;
-    border-color: #9a0000;
-    color: #9a0000;
+    color: white;
+    background-color: #890000;
 }
 
 .edit-btn {
