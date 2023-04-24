@@ -49,9 +49,8 @@ Route::delete('/settings/requirements/{id}/delete', [SettingsController::class, 
 Route::patch('/settings/requirements/{id}/edit', [SettingsController::class, 'updateRequirement'])->name('settings.updateRequirement');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
-Route::get('/profile/{id}', [ProfileController::class, 'index'])->name('profile.index');
-Route::get('/profile/documents/required', [ProfileController::class, 'showRequirements'])->name('profile.requirements');
-Route::get('/profile/documents/all', [ProfileController::class, 'showAll'])->name('profile.all');
+Route::get('/profile/{id}/documents/required', [ProfileController::class, 'showRequirements'])->name('profile.requirements');
+Route::get('/profile/{id}/documents/all', [ProfileController::class, 'showAll'])->name('profile.all');
 
 Auth::routes();
 
