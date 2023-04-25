@@ -4,7 +4,13 @@
             {{ session('success') }}
         </div>
     @endif
+    @if( session('error') )
+        <div class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+    @endif 
     <input type="hidden" id="errors-exist" value="{{$errors->any() ? '1' : '0'}}"></p>
+    <input type="hidden" id="currently-editing" name="currently_editing" value="{{old('currently_editing')}}"></p>
     <table class="table" id="auto-alerts-table">
         <thead >
             <tr id="automated-alerts-header">
@@ -29,17 +35,20 @@
                 <td class="kebab">:</td>
                 <td class="kebab-menu hidden">
                     <div class="kebab-div">
-                        <div><button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button></div>
+                        <div>
+                            <form method="POST" action="{{ route('broadcast.editBroadcast') }}">
+                                @csrf
+                                @method('PATCH')
+                                <input type="hidden" name="id" value="{{$broadcast->id}}">
+                                <button type="submit" class="btn btn-link editAlertBtn" onclick="currently_editing()"><i class="fa-regular fa-pen-line"></i> Edit</button>
+                            </form>
+                            <!-- <button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button> -->
+                        </div>
                         <hr />
                         <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
                     </div>
                 </td>
-                <x-broadcast-modal type="Edit" id="editBroadcastModal" data="$broadcast">
-                    <x-slot name="submitbtn">Save Changes</x-slot>
-                    <x-slot name="label">editBroadcastModalLabel</x-slot>
-                    <x-slot name="color">warning</x-slot>
-                    <x-slot name="modalFunction">editBroadcast</x-slot>
-                </x-broadcast-modal>
+                
 
             </tr>
             @endforeach
@@ -49,14 +58,16 @@
     </div>
 
     <!-- Modals -->
+
+     @php($action = 'broadcast.createBroadcast')
     <x-broadcast-modal type="New" id="newBroadcastModal" data="">
+        <x-slot name="method">'POST'</x-slot>
+        <x-slot name="action">{{ route('broadcast.createBroadcast') }}</x-slot>
         <x-slot name="submitbtn">Create</x-slot>
         <x-slot name="label">newBroadcastModalLabel</x-slot>
         <x-slot name="color">usc btn-light</x-slot>
         <x-slot name="modalFunction">createBroadcast</x-slot>
     </x-broadcast-modal>
-
-    
 
     <x-alert-modal type="" id="confirmDeleteModal" >
         <x-slot name="title">Confirm Delete</x-slot>
@@ -70,14 +81,20 @@
         </x-slot>
     </x-alert-modal>
 
+    <x-broadcast-modal type="Edit" id="editBroadcastModal" data="">
+        <x-slot name="method">PATCH</x-slot>
+        <x-slot name="action">{{ route('broadcast.editBroadcast') }}</x-slot>
+        <x-slot name="submitbtn">Save Changes</x-slot>
+        <x-slot name="label">editBroadcastModalLabel</x-slot>
+        <x-slot name="color">warning</x-slot>
+        <x-slot name="modalFunction">editBroadcast</x-slot>
+    </x-broadcast-modal>
+
     
     @push('scripts')
+    <script src="{{ asset('js/broadcast.js') }}"></script>
     <script>
-        $(window).on('load', function(){
-            if($("#errors-exist").val() == '1'){
-                $('#newBroadcastModal').modal('show');
-            }
-        });
+        
     </script>
     @endpush
 

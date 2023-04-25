@@ -8,7 +8,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('broadcast.createBroadcast') }}">
+                    <form method="POST" action="{{$action}}">
                     @csrf
                         <!-- To input -->
                         <div class="form-floating mb-3">
@@ -41,7 +41,7 @@
                         <div class="input-group mb-3 freq">
                             <span class="input-group-text">Frequency: </span>
                             <span class="input-group-text"><div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="autoSwitch" value="1" name="autoSwitch">
+                                <input class="form-check-input autoSwitch" type="checkbox" value="1" name="autoSwitch">
                                 <label class="form-check-label" for="autoSwitch">Auto</label>
                             </div></span>
                             <input type="number" min="1" value="1" name="count" class="form-control disable disableNum">
