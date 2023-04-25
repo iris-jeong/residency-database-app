@@ -86,13 +86,13 @@ class BroadcastController extends Controller
         $broadcast->title = $request->input('title');
         $broadcast->description = $request->input('description');
         $broadcast->freq_auto = $request->input('autoSwitch');
-        if($broadcast->freq_auto != '1'){
+        if(!$broadcast->freq_auto){
             $broadcast->freq_count = $request->input('count');
-            $broadcast->freqPeriod->id = $request->input('period');
-            $broadcast->freqStartFrom->id = $request->input('start_from');
+            $broadcast->freq_period_id = $request->input('period');
+            $broadcast->freq_start_id= $request->input('start_from');
         }
         $broadcast->message = $request->input('message');
-        $broadcast->broadcastFormat->id =$request->input('send');
+        $broadcast->format_id =$request->input('send');
         $broadcast->update();
 
         //Redirect the user back to the 'Admin Members' tab.
