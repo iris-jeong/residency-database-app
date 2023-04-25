@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Requirement;
+use App\Models\UserLicense;
 
 class ProfileController extends Controller
 {
@@ -13,12 +14,17 @@ class ProfileController extends Controller
             'demographic',
             'demographic.pgyLevel',
             'demographic.specialty', 
-            'licenses',
+            'userLicenses.license',
+            'userLicenses.file',
+            'files'
         ])->findOrFail($id);
-
-        $requirements = Requirement::all();
+        // return $user;
+        // return $user->demographic->pgyLevel->level;
+        // return $user->files;
         
-        return view('profile.requirements', [
+        $requirements = Requirement::all();
+
+        return view('profile.index', [
             'id' => $id,
             'user' => $user,
             'requirements' => $requirements,
@@ -26,7 +32,18 @@ class ProfileController extends Controller
     }
     
     public function showAll($id) {
-        return view('profile.all');
+        $user = User::with([
+            'demographic',
+            'demographic.pgyLevel',
+            'demographic.specialty', 
+            'userLicenses.license',
+            'userLicenses.file',
+            'files'
+        ])->findOrFail($id);
+        return view('profile.index', [
+            'id' => $id,
+            'user' => $user,
+        ]);
     }
 
     public function index() {

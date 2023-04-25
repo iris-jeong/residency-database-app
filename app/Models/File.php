@@ -20,4 +20,8 @@ class File extends Model
     public function userLicenses() {
         return $this->hasMany(UserLicense::class);
     }
+
+    public function license() {
+        return $this->belongsTo(License::class);
+    }
 }

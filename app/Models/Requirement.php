@@ -13,6 +13,10 @@ class Requirement extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function files() {
+        return $this->hasMany(File::class, 'requirement_id');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

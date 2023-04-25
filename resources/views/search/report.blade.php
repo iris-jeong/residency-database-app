@@ -54,21 +54,19 @@
                     <tr>
                         <td><input class="form-check-input" type="checkbox" value="" id="select"></td>
                         <td>
-                            <a href="{{route('profile.index', [ 'id' => $user->id ] )}}">
+                            <a href="{{route('profile.requirements', [ 'id' => $user->id ] )}}">
                                 {{$user->first_name}} {{$user->last_name}}
                             </a>
                         </td>
-                        {{-- <td>
-                            <span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">
-                                {{$user->demographic->pgyLevel->level}}
-                            </span>
-                        </td> --}}
                         @if($user->demographic)
-    <td><span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">{{$user->demographic->pgyLevel->level}}</span></td>
-@else
-    <td><span class="badge rounded-pill">N/A</span></td>
-@endif
-
+                            <td>
+                                <span class="level {{ str_replace(' ', '', $user->demographic->pgyLevel->level) }} badge rounded-pill">
+                                    {{$user->demographic->pgyLevel->level}}
+                                </span>
+                            </td>
+                        @else
+                            <td><span class="badge rounded-pill">N/A</span></td>
+                        @endif
                         
                         @if ($reportType === 'Demographic')
                             <td><u>{{$user->email}}</u></td>

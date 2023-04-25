@@ -45,7 +45,7 @@ class User extends Authenticatable
     }
 
     public function licenses() {
-        return $this->belongsToMany(License::class, 'user_license')->withPivot('expiration_date');
+        return $this->belongsToMany(License::class, 'user_license')->withPivot('expiration_date', 'file_id');
     }
 
     public function userLicenses() {
