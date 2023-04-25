@@ -13,15 +13,15 @@ class BroadcastModal extends Component
 {
     
     public $type;
-    public $data;
+    public $broadcastSelected;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($type, $data)
+    public function __construct($type, $broadcastSelected)
     {
         $this->type = $type;
-        $this->data = $data;
+        $this->broadcastSelected = $broadcastSelected;
     }
 
     /**

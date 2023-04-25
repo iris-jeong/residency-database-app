@@ -36,16 +36,20 @@
                 <td class="kebab-menu hidden">
                     <div class="kebab-div">
                         <div>
-                            <form method="POST" action="{{ route('broadcast.editBroadcast') }}">
+                            <form method="POST" action="{{ route('broadcast.editBroadcastButton') }}">
                                 @csrf
-                                @method('PATCH')
                                 <input type="hidden" name="id" value="{{$broadcast->id}}">
-                                <button type="submit" class="btn btn-link editAlertBtn" onclick="currently_editing()"><i class="fa-regular fa-pen-line"></i> Edit</button>
+                                <button type="submit" class="btn btn-link editAlertBtn"><i class="fa-regular fa-pen-line"></i> Edit</button>
                             </form>
                             <!-- <button type="button" class="btn btn-link editAlertBtn" data-bs-toggle="modal" data-bs-target="#editBroadcastModal"><i class="fa-regular fa-pen-line"></i> Edit</button> -->
                         </div>
                         <hr />
-                        <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div>
+                        <form method="POST" action="{{ route('broadcast.deleteBroadcast', ['id' => $broadcast->id]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-link deleteAlertBtn"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                        </form>
+                        <!-- <div><button type="button" class="btn btn-link deleteAlertBtn" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"><i class="fa-regular fa-trash-can"></i> Delete</button></div> -->
                     </div>
                 </td>
                 
@@ -58,9 +62,11 @@
     </div>
 
     <!-- Modals -->
+    @if(!isset($broadcastSelected))
+        $broadcastSelected = '';
+    @endif
 
-     @php($action = 'broadcast.createBroadcast')
-    <x-broadcast-modal type="New" id="newBroadcastModal" data="">
+    <x-broadcast-modal type="New" id="newBroadcastModal" :broadcastSelected='$broadcastSelected'>
         <x-slot name="method">'POST'</x-slot>
         <x-slot name="action">{{ route('broadcast.createBroadcast') }}</x-slot>
         <x-slot name="submitbtn">Create</x-slot>
@@ -81,7 +87,8 @@
         </x-slot>
     </x-alert-modal>
 
-    <x-broadcast-modal type="Edit" id="editBroadcastModal" data="">
+    
+    <x-broadcast-modal type="Edit" id="editBroadcastModal" :broadcastSelected='$broadcastSelected'>
         <x-slot name="method">PATCH</x-slot>
         <x-slot name="action">{{ route('broadcast.editBroadcast') }}</x-slot>
         <x-slot name="submitbtn">Save Changes</x-slot>

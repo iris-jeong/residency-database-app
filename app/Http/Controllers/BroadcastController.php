@@ -54,4 +54,24 @@ class BroadcastController extends Controller
             ->route('broadcast.automated-alerts')
             ->with('success', "Successfully added automated broadcast for \"{$request->input('title')}\".");
     }
+    public function deleteBroadcast($id) {
+        //Retrieve the broadcast.
+        $broadcast = Broadcasts::find($id);
+
+        //Validate to make sure correct id retreived
+        if(!$broadcast) {
+            return redirect()
+                ->route('broadcast.automated-alerts')
+                ->with('error', 'Broadcast not found.');
+        }
+
+        //Delete the requirement.
+        $broadcast->delete();
+        
+        //Redirect.
+        return redirect()
+            ->route('broadcast.automated-alerts')
+            ->with('success', "Successfully deleted the '{$broadcast->title}' automated broadcast.");
+    }
+
 }
