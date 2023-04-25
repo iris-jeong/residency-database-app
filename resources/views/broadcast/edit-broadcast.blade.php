@@ -51,7 +51,7 @@
                 <option></option>
                 @foreach($freqPeriods as $freqPeriod)
                 <option value="{{$freqPeriod->id}}"
-                @if ($broadcast->freq_auto != '1' && $broadcast->freqPeriod->id == $freqPeriod->id)
+                @if (!$broadcast->freq_auto && $broadcast->freqPeriod->id == $freqPeriod->id)
                     selected="selected"
                 @endif
                 >{{$freqPeriod->period}}</option>
@@ -62,7 +62,7 @@
                 <option></option>
                 @foreach($freqStarts as $freqStart)
                 <option value="{{$freqStart->id}}"
-                @if ($broadcast->freq_auto != '1' && $broadcast->freqStartFrom->id == $freqStart->id)
+                @if (!$broadcast->freq_auto && $broadcast->freqStartFrom->id == $freqStart->id)
                     selected="selected"
                 @endif
                 >{{$freqStart->start_from}}</option>
