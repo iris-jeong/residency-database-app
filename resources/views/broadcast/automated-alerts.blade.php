@@ -61,7 +61,7 @@
     </div>
 
     <!-- Modals -->
-    <x-broadcast-modal type="New" id="newBroadcastModal" :broadcastSelected='$broadcastSelected'>
+    <x-broadcast-modal type="New" id="newBroadcastModal">
         <x-slot name="method">'POST'</x-slot>
         <x-slot name="action">{{ route('broadcast.createBroadcast') }}</x-slot>
         <x-slot name="submitbtn">Create</x-slot>

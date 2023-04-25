@@ -15,7 +15,7 @@
                     @endif
                         <!-- To input -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingToInput" placeholder="to" name="to" value="{{$broadcastSelected->to}}">
+                            <input type="text" class="form-control" id="floatingToInput" placeholder="to" name="to">
                             <label for="floatingToInput">To: </label>
                             @error("to")
                                 <small class="text-danger">{{$message}}</small>

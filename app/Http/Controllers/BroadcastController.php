@@ -22,9 +22,7 @@ class BroadcastController extends Controller
 
     public function showAutomatedAlerts() {
         $automated_broadcasts = Broadcasts::all(); // Gets all the broadcasts in the broadcast table
-        $broadcast = Broadcasts::latest()->first();
-
-        return view('broadcast.automated-alerts', ['broadcasts' => $automated_broadcasts, 'broadcastSelected' => $broadcast]);
+        return view('broadcast.automated-alerts', ['broadcasts' => $automated_broadcasts]);
     }
 
     public function createBroadcast(Request $request){
