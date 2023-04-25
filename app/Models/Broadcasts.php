@@ -15,17 +15,17 @@ class Broadcasts extends Model
 
     //A broadcast has one format
     public function broadcastFormat() {
-        return $this->belongsTo(BroadcastFormat::class);
+        return $this->belongsTo(BroadcastFormat::class, 'format_id');
     }
 
     //A user has one frequency period.
     public function freqPeriod() {
-        return $this->belongsTo(FrequencyPeriod::class);
+        return $this->belongsTo(FrequencyPeriod::class, 'freq_period_id');
     }
 
     //A user has one starting point.
     public function freqStartFrom() {
-        return $this->belongsTo(FrequencyStartFrom::class);
+        return $this->belongsTo(FrequencyStartFrom::class, 'freq_start_id');
     }
 
     protected $fillable = [

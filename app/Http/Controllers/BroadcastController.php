@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BroadcastFormat;
 use App\Models\Broadcasts;
+use App\Models\FrequencyPeriod;
+use App\Models\FrequencyStartFrom;
 use Illuminate\Http\Request;
 
 
@@ -117,7 +120,7 @@ class BroadcastController extends Controller
             ->with('success', "Successfully deleted the '{$broadcast->title}' automated broadcast.");
     }
 
-    public function editBroadcastButton(Request $request){
+    public function showEditBroadcastPage(Request $request){
         //Retrieve the broadcast.
         $id=$request->input('id');
         $broadcast = Broadcasts::find($id);
@@ -129,9 +132,15 @@ class BroadcastController extends Controller
                 ->with('error', 'Broadcast not found.');
         }
 
-        $automated_broadcasts = Broadcasts::all(); // Gets all the broadcasts in the broadcast table
-
-        return view('broadcast.automated-alerts', ['broadcasts' => $automated_broadcasts, 'broadcastSelected' => $broadcast]);
+        $frequencyPeriods = FrequencyPeriod::all();
+        $frequencyStarts = FrequencyStartFrom::all();
+        $formats = BroadcastFormat::all();
+        return view('broadcast.edit-broadcast', [
+            'broadcast' => $broadcast,
+            'freqPeriods' => $frequencyPeriods,
+            'freqStarts' => $frequencyStarts,
+            'formats' => $formats
+        ]);
 
         // return redirect()
         //     ->route('broadcast.automated-alerts')->with('broadcastSelected', $broadcast);

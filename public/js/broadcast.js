@@ -2,38 +2,31 @@ $(window).on('load', function(){
     if($("#errors-exist").val() == '1'){
         $('#newBroadcastModal').modal('show');
     }
+});
 
-    if($("#currently-editing").val() == '1'){
-        $('#editBroadcastModal').modal('show');
-    }
+$(".clear").on('click',function(){
+    $(this).parents('form').find('input').val('');
+    $(this).parents('form').find('textarea').html('');
 });
 
 $(document).ready(function(){
-    // function currently_editing(){
-    //     // if($("#currently-editing").val() != '1'){
-    //     $('#currently-editing').val() = '1';
-    //     // }
-        
-    // }
     
-    $('.autoSwitch').each(function(i) {
-        $(this).click(function(){
-            if($(this).is(':checked')){
-                $('.disable').prop("disabled", true);
-                $('.disableLabel').css("background-color", "#EAECEF");
-                $('.disableLabel').css("color", "#C5C6C8");
-                $('.disableNum').prop("value", "");
+    $('.autoSwitch').click(function() {
+        if($(this).is(':checked')){
+            $('.disable').prop("disabled", true);
+            $('.disableLabel').css("background-color", "#EAECEF");
+            $('.disableLabel').css("color", "#C5C6C8");
+            $('.disableNum').prop("value", "");
 
-                // var activeTab = $(this).attr("href");
-                // $('.autoSwitch').not(activeTab).css("display","none");
-            }
-            else{
-                $('.disable').prop("disabled", false);
-                $('.disableLabel').css("background-color", "#F8F9FA");
-                $('.disableLabel').css("color", "black");
-                $('.disableNum').prop("value", "1");
-            }
-        })
+            // var activeTab = $(this).attr("href");
+            // $('.autoSwitch').not(activeTab).css("display","none");
+        }
+        else{
+            $('.disable').prop("disabled", false);
+            $('.disableLabel').css("background-color", "#F8F9FA");
+            $('.disableLabel').css("color", "black");
+            $('.disableNum').prop("value", "1");
+        }
     })
 
     //Retrieve all the corresponding kebab menus "edit / delete"

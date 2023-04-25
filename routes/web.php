@@ -36,7 +36,7 @@ Route::get('/broadcast/automated-alerts', [BroadcastController::class, 'showAuto
 Route::post('/broadcast/automated-alerts', [BroadcastController::class, 'createBroadcast'])->name('broadcast.createBroadcast');
 Route::patch('/broadcast/automated-alerts/edit', [BroadcastController::class, 'editBroadcast'])->name('broadcast.editBroadcast');
 Route::delete('/broadcast/automated-alerts/{id}/delete', [BroadcastController::class, 'deleteBroadcast'])->name('broadcast.deleteBroadcast');
-Route::post('/broadcast/automated-alerts/editbtn', [BroadcastController::class, 'editBroadcastButton'])->name('broadcast.editBroadcastButton');
+Route::post('/broadcast/automated-alerts/editpage', [BroadcastController::class, 'showEditBroadcastPage'])->name('broadcast.showEditBroadcastPage');
 
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 Route::post('/new', [NewResidentController::class, 'create'])->name('new.create');

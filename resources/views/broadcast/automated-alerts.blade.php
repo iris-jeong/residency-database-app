@@ -10,7 +10,6 @@
         </div>
     @endif 
     <input type="hidden" id="errors-exist" value="{{$errors->any() ? '1' : '0'}}"></p>
-    <input type="hidden" id="currently-editing" name="currently_editing" value="{{ isset($broadcastSelected) ? '1' : '0' }}"></p>
     <table class="table" id="auto-alerts-table">
         <thead >
             <tr id="automated-alerts-header">
@@ -36,7 +35,7 @@
                 <td class="kebab-menu hidden">
                     <div class="kebab-div">
                         <div>
-                            <form method="POST" action="{{ route('broadcast.editBroadcastButton') }}">
+                            <form method="POST" action="{{ route('broadcast.showEditBroadcastPage') }}">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$broadcast->id}}">
                                 <button type="submit" class="btn btn-link editAlertBtn"><i class="fa-regular fa-pen-line"></i> Edit</button>
@@ -62,10 +61,6 @@
     </div>
 
     <!-- Modals -->
-    @if(!isset($broadcastSelected))
-        $broadcastSelected = '';
-    @endif
-
     <x-broadcast-modal type="New" id="newBroadcastModal" :broadcastSelected='$broadcastSelected'>
         <x-slot name="method">'POST'</x-slot>
         <x-slot name="action">{{ route('broadcast.createBroadcast') }}</x-slot>
@@ -86,16 +81,6 @@
             <button type="button" class="btn btn-danger">Delete</button>
         </x-slot>
     </x-alert-modal>
-
-    
-    <x-broadcast-modal type="Edit" id="editBroadcastModal" :broadcastSelected='$broadcastSelected'>
-        <x-slot name="method">PATCH</x-slot>
-        <x-slot name="action">{{ route('broadcast.editBroadcast') }}</x-slot>
-        <x-slot name="submitbtn">Save Changes</x-slot>
-        <x-slot name="label">editBroadcastModalLabel</x-slot>
-        <x-slot name="color">warning</x-slot>
-        <x-slot name="modalFunction">editBroadcast</x-slot>
-    </x-broadcast-modal>
 
     
     @push('scripts')

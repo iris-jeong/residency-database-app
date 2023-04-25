@@ -103,7 +103,7 @@
                         
                         <!-- Buttons to cancel or send -->
                         <div class="button-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-outline-secondary">Clear</button>
+                            <button type="button" class="btn btn-outline-secondary clear">Clear</button>
                             <button type="submit" class="btn btn-{{ $color }} {{ $submitbtn }}">{{ $submitbtn }}</button>
                         </div>
         
