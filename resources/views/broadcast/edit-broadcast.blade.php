@@ -8,7 +8,7 @@
 <h1 class="mb-3"><a href="{{route('broadcast.automated-alerts')}}"><i class="fa-solid fa-arrow-left"></i></a> Edit "{{$broadcast->title}}" Broadcast</h1>
 
 <div>
-    <form method="POST" action="{{ route('broadcast.editBroadcast') }}">
+    <form method="POST" action="{{ route('broadcast.editBroadcast', ['id' => $broadcast->id]) }}">
     @csrf
     @method('PATCH')
         <!-- To input -->

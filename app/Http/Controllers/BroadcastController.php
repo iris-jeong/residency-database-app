@@ -60,7 +60,7 @@ class BroadcastController extends Controller
             ->with('success', "Successfully added automated broadcast for \"{$request->input('title')}\".");
     }
 
-    public function editBroadcast(Request $request){
+    public function editBroadcast(Request $request, $id){
 
         //Specify the rules to validate user input.
         $request->validate([
@@ -74,7 +74,6 @@ class BroadcastController extends Controller
         ]);
 
         //Once validated, insert the data into the database.
-        $id = $request->input('id');
         $broadcast = Broadcasts::find($id);
 
         if(!$broadcast) {
