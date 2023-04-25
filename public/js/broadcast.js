@@ -2,9 +2,19 @@ $(window).on('load', function(){
     if($("#errors-exist").val() == '1'){
         $('#newBroadcastModal').modal('show');
     }
+
+    if($("#currently-editing").val() == '1'){
+        $('#editBroadcastModal').modal('show');
+    }
 });
 
 $(document).ready(function(){
+    // function currently_editing(){
+    //     // if($("#currently-editing").val() != '1'){
+    //     $('#currently-editing').val() = '1';
+    //     // }
+        
+    // }
     
     $('.autoSwitch').each(function(i) {
         $(this).click(function(){

@@ -10,9 +10,12 @@
                 <div class="modal-body">
                     <form method="POST" action="{{$action}}">
                     @csrf
+                    @if($method == 'PATCH')
+                        @method('PATCH')
+                    @endif
                         <!-- To input -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingToInput" placeholder="to" name="to">
+                            <input type="text" class="form-control" id="floatingToInput" placeholder="to" name="to" value="{{$broadcastSelected->to}}">
                             <label for="floatingToInput">To: </label>
                             @error("to")
                                 <small class="text-danger">{{$message}}</small>

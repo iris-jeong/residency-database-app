@@ -10,7 +10,7 @@
         </div>
     @endif 
     <input type="hidden" id="errors-exist" value="{{$errors->any() ? '1' : '0'}}"></p>
-    <input type="hidden" id="currently-editing" name="currently_editing" value="{{old('currently_editing')}}"></p>
+    <input type="hidden" id="currently-editing" name="currently_editing" value="{{ isset($broadcastSelected) ? '1' : '0' }}"></p>
     <table class="table" id="auto-alerts-table">
         <thead >
             <tr id="automated-alerts-header">
