@@ -18,8 +18,5 @@
 		<div class="tabcontent" {{ $attributes }}>
 			{{ $slot }}
 		</div>
-	</div><!--#settings-container-->
-    @push('scripts')
-    <script src="{{ asset('js/broadcast.js') }}"></script>
-    @endpush
+	</div>
 @endsection

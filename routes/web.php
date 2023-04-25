@@ -34,6 +34,7 @@ Route::get('/broadcast', [BroadcastController::class, 'showCustomMessage'])->nam
 Route::get('/broadcast/custom-message', [BroadcastController::class, 'showCustomMessage'])->name('broadcast.custom-message');
 Route::get('/broadcast/automated-alerts', [BroadcastController::class, 'showAutomatedAlerts'])->name('broadcast.automated-alerts');
 Route::post('/broadcast/automated-alerts', [BroadcastController::class, 'createBroadcast'])->name('broadcast.createBroadcast');
+Route::patch('/broadcast/automated-alerts', [BroadcastController::class, 'editBroadcast'])->name('broadcast.editBroadcast');
 
 Route::get('/new', [NewResidentController::class, 'index'])->name('new.index');
 Route::post('/new', [NewResidentController::class, 'create'])->name('new.create');
