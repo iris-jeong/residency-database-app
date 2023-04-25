@@ -142,8 +142,5 @@ class BroadcastController extends Controller
             'freqStarts' => $frequencyStarts,
             'formats' => $formats
         ]);
-
-        // return redirect()
-        //     ->route('broadcast.automated-alerts')->with('broadcastSelected', $broadcast);
     }
 }
