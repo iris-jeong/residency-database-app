@@ -86,9 +86,11 @@ class BroadcastController extends Controller
         $broadcast->title = $request->input('title');
         $broadcast->description = $request->input('description');
         $broadcast->freq_auto = $request->input('autoSwitch');
-        $broadcast->freq_count = $request->input('count');
-        $broadcast->freqPeriod->id = $request->input('period');
-        $broadcast->freqStartFrom->id = $request->input('start_from');
+        if($broadcast->freq_auto != '1'){
+            $broadcast->freq_count = $request->input('count');
+            $broadcast->freqPeriod->id = $request->input('period');
+            $broadcast->freqStartFrom->id = $request->input('start_from');
+        }
         $broadcast->message = $request->input('message');
         $broadcast->broadcastFormat->id =$request->input('send');
         $broadcast->update();
