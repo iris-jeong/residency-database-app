@@ -8,6 +8,7 @@ $(".clear").on('click',function(){
     $(this).parents('form').find('input').val('');
     $(this).parents('form').find('textarea').html('');
     $(this).parents('form').find('select').val('');
+    $(this).parents('form').find('textarea').val('');
 });
 
 $(document).ready(function(){
