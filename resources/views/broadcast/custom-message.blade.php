@@ -48,9 +48,20 @@
         
         <!-- Buttons to cancel or send -->
         <div class="button-footer d-flex justify-content-between">
-            <button type="button" class="btn btn-outline-secondary">Clear</button>
+            <button type="button" class="btn btn-outline-secondary clear">Clear</button>
             <button type="button" class="btn btn-usc">Send</button>
         </div>
 
     </form>
+
+    @push('scripts')
+    <script>
+        $(".clear").on('click',function(){
+        $(this).parents('form').find('input').val('');
+        $(this).parents('form').find('textarea').html('');
+        $(this).parents('form').find('select').val('');
+    });
+    </script>
+    @endpush
+
 </x-layouts.broadcast>
