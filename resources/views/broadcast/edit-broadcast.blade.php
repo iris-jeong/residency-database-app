@@ -48,7 +48,7 @@
             <input type="number" min="1" value="{{$broadcast->freq_count}}" name="count" class="form-control disable disableNum">
             <span class="input-group-text disableLabel">times per</span>
             <select class="form-select disable" id="inputGroupSelect01" name="period">
-                <option></option>
+                <option value=""></option>
                 @foreach($freqPeriods as $freqPeriod)
                 <option value="{{$freqPeriod->id}}"
                 @if ($broadcast->freq_auto != '1' && $broadcast->freqPeriod->id == $freqPeriod->id)
@@ -59,7 +59,7 @@
             </select>
             <span class="input-group-text disableLabel">starting</span>
             <select class="form-select disable" id="inputGroupSelect01" name="start_from">
-                <option></option>
+                <option value=""></option>
                 @foreach($freqStarts as $freqStart)
                 <option value="{{$freqStart->id}}"
                 @if ($broadcast->freq_auto != '1' && $broadcast->freqStartFrom->id == $freqStart->id)
@@ -123,6 +123,8 @@
     $(".clear").on('click',function(){
         $(this).parents('form').find('input').val('');
         $(this).parents('form').find('textarea').html('');
+        $(this).parents('form').find('select').val('');
+        $(this).parents('form').find('textarea').val('');
     });
     $(document).ready(function(){
         

@@ -57,7 +57,7 @@
                 <x-slot name="body"><input class="form-control" type="file" id="formFileMultiple" multiple></x-slot>
                 <x-slot name="footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn upload-btn">Submit</button>
                 </x-slot>
             </x-alert-modal>
 
