@@ -1,0 +1,11 @@
+id,created_at,updated_at,start_from
+4,,,6 months before due
+14,,,5 months before due
+24,,,4 months before due
+34,,,3 months before due
+44,,,2 months before due
+54,,,1 month before due
+64,,,2 weeks before due
+74,,,1 week before due
+84,,,day of due date
+94,,,day after due date
