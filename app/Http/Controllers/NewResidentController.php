@@ -40,6 +40,7 @@ class NewResidentController extends Controller
             'password' => bcrypt('password'), //User updates later.
             'access_level_id' => AccessLevel::where('access', 'User')->first()->id,
         ]);
+        $newUser->save();
         
         $newDemographic = new Demographic([
             'birth_date' => $request->input('birthday') ? $request->input('birthday') : '',
