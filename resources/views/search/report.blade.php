@@ -47,6 +47,7 @@
                 @foreach($columns as $column)
                     <th scope="col">{{$column}}</th>
                 @endforeach
+                <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -76,9 +77,20 @@
                             <td>{{$user->demographic->address}}, {{$user->demographic->city}}, {{$user->demographic->state}} {{$user->demographic->zip}}</td>
                        
                         @elseif ($reportType === 'Test')
-                            <td><u>{{$user->tests->first()->name}}</u></td>
-                            <td>{{$user->tests->first()->pivot->score}}</td>
-                        @else
+                            @if ($user->tests->count() > 0)
+                                <td><u>{{$user->tests->first()->name}}</u></td>
+                                <td>{{$user->tests->first()->pivot->score}}</td>
+                                <td>
+                                    <div class="status status-good"></div>
+                                </td>
+                            @else 
+                                <td>---</td>
+                                <td>---</td>
+                                <td>
+                                    <div class="status status-bad"></div>
+                                </td>
+                            @endif
+                        @elseif ($reportType === 'License')
                             @php
                                 $missingLicense = false;
                             @endphp
