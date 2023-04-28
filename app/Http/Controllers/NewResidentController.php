@@ -40,8 +40,7 @@ class NewResidentController extends Controller
             'password' => bcrypt('password'), //User updates later.
             'access_level_id' => AccessLevel::where('access', 'User')->first()->id,
         ]);
-        $newUser->save();
-
+        
         $newDemographic = new Demographic([
             'birth_date' => $request->input('birthday') ? $request->input('birthday') : '',
             'sex' => $request->input('sex') ? $request->input('sex') : '',
@@ -49,9 +48,9 @@ class NewResidentController extends Controller
             'city' => $request->input('city') ? $request->input('city') : '',
             'state' => $request->input('state') ? $request->input('state') : '',
             'zip' => $request->input('zip') ? $request->input('zip') : '',
-            'phone_number' => $request->input('phone_number') ? $request->input('phone_number') : '',
-            'npi_number' => $request->input('npi_number') ? $request->input('npi_number') : '',
-            'pager_number' => $request->input('pager_number') ? $request->input('pager_number') : '',
+            'phone_number' => $request->input('phone_number') ? $request->input('phone') : '',
+            'npi_number' => $request->input('npi_number') ? $request->input('npiNumber') : '',
+            'pager_number' => $request->input('pager_number') ? $request->input('pagerNumber') : '',
             'pgy_level_id' => $request->input('pgyLevel'),
             'specialty_id' => $request->input('specialty'),
             'user_id' => $newUser->id,
