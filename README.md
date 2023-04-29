@@ -16,7 +16,7 @@ APP_URL=http://localhost
 # APP_DEBUG=false
 # APP_URL=https://residency_database_app.heroku.com
 ```
-3. Open terminal and navigate to the root directory (/residency-database-app/)
+3. Open terminal and navigate to the root directory (.../residency-database-app/)
 4. Run the following command to start the project (may take a while to run): 
 ```
 vendor/bin/sail up
