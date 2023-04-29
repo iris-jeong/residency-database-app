@@ -3,7 +3,7 @@
 ## https://residency-database-app.herokuapp.com/
 
 ### Running the project locally
-0. Make sure Docker Desktop is downloaded on your device
+0. Make sure Docker Desktop is downloaded and running on your device
 1. Download/clone the Github Repository
 2. Open the .env file and make the following changes to the first 8 lines (comments out the production app code and switches to local development)
 ```
