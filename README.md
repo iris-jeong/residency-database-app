@@ -1,8 +1,8 @@
-### ITP 460 Team 1: Residency Database App Project
+# ITP 460 Team 1: Residency Database App Project
 ## By Iris Jeong, Victor Muljo, Jeffrey Lee, Sanko Shen, Larry Li, and Jalen Layfield 
 ## https://residency-database-app.herokuapp.com/
 
-## Running the project locally
+### Running the project locally
 0. Make sure Docker Desktop is downloaded on your device
 1. Download/clone the Github Repository
 2. Open the .env file and make the following changes to the first 8 lines (comments out the production app code and switches to local development)
